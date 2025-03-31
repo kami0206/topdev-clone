@@ -1,0 +1,19 @@
+:root {
+    @each $name, $value in $grid-breakpoints {
+        --breakpoint-#{$name}: #{$value};
+    }
+}
+
+@if $enable-grid-classes {
+    .row {
+        @include make-row();
+
+        > * {
+            @include make-col-ready();
+        }
+    }
+}
+
+@if $enable-grid-classes {
+    @include make-grid-columns();
+}

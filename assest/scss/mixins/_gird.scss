@@ -1,0 +1,89 @@
+@use 'sass:math';
+
+@mixin make-row($gutter: $grid-gutter-width) {
+    --gutter-x: #{$gutter};
+    --gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--gutter-y));
+    margin-right: calc(-.5 * var(--gutter-x));
+    margin-left: calc(-.5 * var(--gutter-x));
+}
+
+@mixin make-col-ready() {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--gutter-x) * .5);
+    padding-left: calc(var(--gutter-x) * .5);
+    margin-top: var(--gutter-y);
+}
+  
+@mixin make-col($size: false, $columns: $grid-columns) {
+    @if $size {
+        flex: 0 0 auto;
+        width: calc(100% * $size / $columns);
+    } else {
+        flex: 1 1 0;
+        max-width: 100%;
+    }
+}
+
+@mixin make-col-auto() {
+    flex: 0 0 auto;
+    width: auto;
+}
+
+@mixin row-cols($count) {
+    > * {
+        flex: 0 0 auto;
+        width: math.percentage(math.div(1, $count));
+    }
+}
+
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            .col#{$infix} {
+              flex: 1 0 0;
+            }
+      
+            .row-cols#{$infix}-auto > * {
+              @include make-col-auto();
+            }
+      
+            @if $grid-row-columns > 0 {
+                @for $i from 1 through $grid-row-columns {
+                    .row-cols#{$infix}-#{$i} {
+                        @include row-cols($i);
+                    }
+                }
+            }
+      
+            .col#{$infix}-auto {
+                @include make-col-auto();
+            }
+      
+            @if $columns > 0 {
+                @for $i from 1 through $columns {
+                    .col#{$infix}-#{$i} {
+                        @include make-col($i, $columns);
+                    }
+                } 
+            }
+
+            @each $key, $value in $gutters {
+                .g#{$infix}-#{$key},
+                .gx#{$infix}-#{$key} {
+                  --gutter-x: #{$value};
+                }
+        
+                .g#{$infix}-#{$key},
+                .gy#{$infix}-#{$key} {
+                  --gutter-y: #{$value};
+                }
+            }
+        }
+    }
+}

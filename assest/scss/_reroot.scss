@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--#{$prefix}body-font-family);
+    font-size: var(--#{$prefix}body-font-size);
+    font-weight: var(--#{$prefix}body-font-weight);
+    line-height: var(--#{$prefix}body-line-height);
+    color: var(--#{$prefix}body-color);
+    text-align: var(--#{$prefix}body-text-align);
+    color: var(--#{$prefix}body-color);
+    background-color: var(--#{$prefix}body-bg);
+    -webkit-text-size-adjust: 100%;
+}
+%heading {
+    line-height: $headings-line-height;
+    letter-spacing: 0;
+    color: var(--#{$prefix}heading-color);
+}
+
+h1 {
+    @extend %heading;
+    font-size: #{$h1-font-size};
+    font-family: #{$font-family-bold};
+}
+
+h2 {
+    @extend %heading;
+    font-size: #{$h2-font-size};
+    font-family: #{$font-family-bold};
+}
+
+h3 {
+    @extend %heading;
+    font-size: #{$h3-font-size};
+}
+
+h4 {
+    @extend %heading;
+    font-size: #{$h4-font-size};
+}
+
+h5 {
+    @extend %heading;
+    font-size: #{$h5-font-size};
+}
+
+h6 {
+    @extend %heading;
+    font-size: #{$h6-font-size};
+}
+
+ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+a {
+    text-decoration: none;
+    color: #{$black};
+}

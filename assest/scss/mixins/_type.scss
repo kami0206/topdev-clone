@@ -1,0 +1,30 @@
+@mixin typography($config) {
+    $default: null;
+    @if map-has-key($config, 'mobile') {
+        $default: map-get($config, 'mobile');
+    } @else if map-has-key($config, 'desktop') {
+        $default: map-get($config, 'desktop');
+    } @else {
+        $default: $config;
+    }
+
+    @if type-of($default) == 'map' {
+        @include make-typography($default);
+    }
+
+    @if map-has-key($config, 'desktop') {
+        @include media-breakpoint-up(lg) {
+            $desktop: map-get($config, 'desktop');
+            @if type-of($desktop) == 'map' {
+                @include make-typography($desktop);
+            }
+        }
+    }
+}
+
+@mixin make-typography($config) {
+    font-size: map-get($config, 'fs');
+    line-height: calc(map-get($config, 'lh') * map-get($config, 'fs'));
+    font-weight: map-get($config, 'fw');
+    letter-spacing: map-get($config, 'sp');
+}

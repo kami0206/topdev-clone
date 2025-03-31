@@ -1,0 +1,33 @@
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center; // Căn giữa slider
+    align-items: center;
+  
+    .owl-carousel {
+        display: flex;
+        align-items: center;
+    
+        .owl-item {
+          cursor: grab;
+        }
+    
+        .owl-item:last-child {
+          margin-right: 0; // Xóa khoảng cách của item cuối cùng
+        }
+      }
+
+    
+      // Responsive adjustments
+      @media (max-width: 1024px) {
+        .owl-carousel .owl-item {
+          margin-right: 15px; // Giảm khoảng cách trên màn hình trung bình
+        }
+      }
+    
+      @media (max-width: 768px) {
+        .owl-carousel .owl-item {
+          margin-right: 10px; // Giảm khoảng cách trên màn hình nhỏ
+        }
+      }
+  }

@@ -1,0 +1,200 @@
+@use 'sass:map';
+
+.h1 {
+    @extend h1;
+}
+
+.h2 {
+    @extend h2;
+}
+
+.h3 {
+    @extend h3;
+}
+
+.h4 {
+    @extend h4;
+}
+
+.h5 {
+    @extend h5;
+}
+
+.h6 {
+    @extend h6;
+}
+
+.text-body {
+    @extend %heading;
+    font-size: 15px;
+}
+
+.text-description {
+    @extend %heading;
+    font-size: 12.5px;
+}
+
+// Line-height: a% x font-size
+
+// fs: Font-size
+// lh: Line-height
+// sp: Spacing
+// fw: Font-weight
+
+$typography-headings: (
+    big-title-1: (
+        mobile: (
+            fs: 32px,
+            lh: 1.3,
+            sp: 1px,
+            fw: $font-weight-semibold,
+        ),
+        desktop: (
+            fs: 40px,
+            lh: 1.3,
+            sp: 1px,
+            fw: $font-weight-semibold,
+        ),
+    ),
+    big-title-2: (
+        mobile: (
+            fs: 24px,
+            lh: 1.25,
+            sp: 1px,
+            fw: $font-weight-bold,
+        ),
+        desktop: (
+            fs: 32px,
+            lh: 1.25,
+            sp: 1px,
+            fw: $font-weight-semibold,
+        ),
+    ),
+    heading-1: (
+        mobile: (
+            fs: 18px,
+            lh: 1.35,
+            sp: 0.5px,
+            fw: $font-weight-semibold,
+        ),
+        desktop: (
+            fs: 24px,
+            lh: 1.34,
+            sp: 0.5px,
+            fw: $font-weight-semibold,
+        ),
+    ),
+    heading-2: (
+        mobile: (
+            fs: 16px,
+            lh: 1.35,
+            sp: 0.5px,
+            fw: $font-weight-semibold,
+        ),
+        desktop: (
+            fs: 20px,
+            lh: 1.3,
+            sp: 0px,
+            fw: $font-weight-semibold,
+        ),
+    ),
+);
+
+$typography-bodies: (
+    description: (
+        fs: 18px,
+        lh: 1.42,
+        sp: 0.5px,
+        fw: $font-weight-normal,
+    ),
+    botton-label: (
+        fs: 16px,
+        lh: 1.4,
+        sp: 0px,
+        fw: $font-weight-bold,
+    ),
+    body-1: (
+        fs: 16px,
+        lh: 1.4,
+        sp: 0px,
+        fw: $font-weight-normal,
+    ),
+    body-2: (
+        fs: 14px,
+        lh: 1.3,
+        sp: 0px,
+        fw: $font-weight-normal,
+    ),
+    subheading: (
+        fs: 14px,
+        lh: 1.3,
+        sp: 0px,
+        fw: $font-weight-bold,
+    ),
+    small-caption: (
+        fs: 12px,
+        lh: 1.35,
+        sp: 0px,
+        fw: $font-weight-normal,
+    ),
+    extrag-small: (
+        fs: 10px,
+        lh: 1.5,
+        sp: 0px,
+        fw: $font-weight-medium,
+    ),
+    small-headline: (
+        fs: 12px,
+        lh: 1.35,
+        sp: 1px,
+        fw: $font-weight-semibold,
+    ),
+    extra-small: (
+        fs: 10px,
+        lh: 1.35,
+        sp: 0px,
+        fw: $font-weight-medium,
+    ),
+);
+
+$typography-displays: (
+    display-1: (
+        mobile: (
+            fs: 16px,
+            lh: 1.1,
+            sp: 1px,
+            fw: $font-weight-medium,
+        ),
+        desktop: (
+            fs: 16px,
+            lh: 1.1,
+            sp: 1px,
+            fw: $font-weight-medium,
+        ),
+    ),
+    display-2: (
+        mobile: (
+            fs: 12px,
+            lh: 1.35,
+            sp: 0.5px,
+            fw: $font-weight-medium,
+        ),
+        desktop: (
+            fs: 16px,
+            lh: 1.35,
+            sp: 0.5px,
+            fw: $font-weight-medium,
+        ),
+    ),
+);
+
+$typographies: map.merge(
+    map.merge($typography-headings, $typography-bodies),
+    $typography-displays
+);
+
+@each $name, $config in $typographies {
+    .#{$name} {
+        @include typography($config);
+    }
+}

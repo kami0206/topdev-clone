@@ -1,0 +1,291 @@
+// Prefix
+// topdev = td 
+$prefix : 'td-';
+
+// Colors
+// primary
+$primary0: #E24C32;
+$primaryDC1: #47130A;
+$primaryDC2: #9C2A16;
+$primaryLC1: #E66751;
+$primaryLC2: #EB8370;
+$primaryLC3: #EF9E8F;
+$primaryLC4: #F8D4CE;
+$primaryLC5: #FCEFED;
+
+$primarys:(
+    primary-0: $primary0,
+    primary-dc-1: $primaryDC1,
+    primary-dc-2: $primaryDC2,
+    primary-lc-1: $primaryLC1,
+    primary-lc-2: $primaryLC2,
+    primary-lc-3: $primaryLC3,
+    primary-lc-4: $primaryLC4,
+    primary-lc-5: $primaryLC5,
+);
+
+// neutral
+$neutral_gray8:#212832;
+$neutral_gray7:#383E46;
+$neutral_gray6:#666666;
+$neutral_gray5:#858585;
+$neutral_gray4:#A3A3A3;
+$neutral_gray3:#C2C2C2;
+$neutral_gray2:#E0E0E0;
+$neutral_gray1:#F0F0F0;
+
+$neutral_gray:(
+    neutral-gray-8: $neutral_gray8,
+    neutral-gray-7: $neutral_gray7,
+    neutral-gray-6: $neutral_gray6,
+    neutral-gray-5: $neutral_gray5,
+    neutral-gray-4: $neutral_gray4,
+    neutral-gray-3: $neutral_gray3,
+    neutral-gray-2: $neutral_gray2,
+    neutral-gray-1: $neutral_gray1,
+);
+
+//success
+$success1: #209B25;
+$success2: #95E999;
+$success3: #EAFBEB;
+$successes: (
+    success-1: $success1,
+    success-2: $success2,
+    success-3: $success3,
+);
+//warning
+$warning1: #FDC500;
+$warning2: #FED02C;
+$warning3: #FFFBEB;
+$warnings:(
+    warning-1: $warning1,
+    warning-2: $warning2,
+    warning-3: $warning3,
+);
+//info
+$infor1: #3366FF;
+$infor2: #2E9DFF;
+$infor3: #E9F6FE;
+$infos: (
+    infor-1: $infor1,
+    infor-2: $infor1,
+    infor-3: $infor1,
+);
+//Error
+$error1: #D70801;
+$error2: #FE564B;
+$error3: #FFEEEA;
+$errors: (
+    error-1: $error1,
+    error-2: $error2,
+    error-3: $error3,
+);
+//other
+$black: #222631;
+$primary: #d34127;
+$dark: #222831;
+$medium: #393e36;
+$bright: #d2d2d2;
+$light: #efefef;
+$white: #ffffff;
+
+$base-colors: (
+    primary: $primary,
+    black: $black,
+    dark: $dark,
+    medium: $medium,
+    bright: $bright,
+    light: $light,
+    white: $white,
+);
+$colors: map-merge(
+    map-merge(
+        map-merge(
+            map-merge(
+                map-merge(map-merge($base-colors, $primarys), $neutral_gray),
+                $successes
+            ),
+            $warnings
+        ),
+        $infos
+    ),
+    $errors
+);
+$bg-colors: $base-colors;
+$text-colors: $base-colors;
+$gar: linear-gradient(to right, #EB2702, #FF7D25, #FF9D5A);
+
+
+//front 
+$font-family: "Roboto", sans-serif;
+$font-semibold: "Roboto-SemiBold", sans-serif;
+$font-regular: "Roboto-Regular", sans-serif;
+$font-bold: "Roboto-Bold", sans-serif;
+$font-medium: "Roboto-Medium", sans-serif;
+
+//spacing 
+$spacer: 4px;
+$spacers: (
+    1: $spacer * 1,
+    2: $spacer * 2,
+    3: $spacer * 3,
+    4: $spacer * 4,
+    5: $spacer * 5,
+    6: $spacer * 6,
+    7: $spacer * 7,
+    8: $spacer * 8,
+    10: $spacer * 10,
+    12: $spacer * 12,
+    14: $spacer * 14,
+    16: $spacer * 16,
+    18: $spacer * 18,
+    20: $spacer * 20,
+);
+
+// start grid-breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+// End Breakpoints
+
+// Grid Columns
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+$grid-row-columns: 6;
+
+$gutters: $spacers;
+// End Grid Columns
+// Container
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px,
+);
+
+$container-padding-x: $grid-gutter-width;
+// End Container
+
+// Border
+$border-width: 1px;
+$border-widths: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+);
+
+$border-style: solid;
+$border-color: #dee2e6;
+
+$border-radius: 0.375rem;
+$border-radius-sm: 0.25rem;
+$border-radius-lg: 0.5rem;
+$border-radius-xl: 1rem;
+$border-radius-xxl: 2rem;
+$border-radius-pill: 50rem;
+// End Border
+//zindex
+$zindex-levels: (
+    n1: -1,
+    0: 0,
+    1: 1,
+    2: 2,
+    3: 3,
+);
+// Options
+$enable-container-classes: true;
+$enable-grid-classes: true;
+// End Options
+// font-weight
+$font-falily-roboto: 'Roboto';
+$font-falily-roboto-bold: 'Roboto-Bold';
+$font-family-base: $font-falily-roboto;
+$font-family-bold: $font-falily-roboto-bold;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * 1.625;
+$h2-font-size: $font-size-base * 1.375;
+$h3-font-size: $font-size-base * 1.125;
+$h4-font-size: $font-size-base;
+$h5-font-size: $font-size-base * 0.875;
+$h6-font-size: $font-size-base * 0.75;
+
+$headings-line-height: 1.45;
+$headings-color: $dark;
+$big-title-font-sizes: (
+    1: 2rem,
+    // 2.5
+    2: 1.5rem,
+    // 2
+);
+
+$display-font-sizes: (
+    1: 1.125rem,
+    // 1.5
+    2: 1rem,
+    // 1.25
+);
+// Body
+
+$body-color: $black;
+$body-bg: $white;
+$body-text-align: null;
+// End Body
+
+//btn 
+$btn-padding-y: 0.375rem;
+$btn-padding-x: 0.75rem;
+
+$btn-font-size: $font-size-base;
+$btn-line-height: $line-height-base;
+$btn-font-weight: $font-weight-normal;
+$btn-white-space: null;
+
+$btn-border-width: $border-width;
+$btn-border-radius: $border-radius;
+$btn-border-color: $border-color;
+$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075);
+
+$btn-color: $body-color;
+$btn-bg: transparent;
+$btn-hover-color: $black;
+$btn-hover-bg: $white;
+
+$btn-focus-color: $black;
+$btn-focus-bg: $white;
+$btn-focus-width: 0.25rem;
+$btn-focus-box-shadow: 0.25rem;
+$btn-disabled-opacity: 0.65;
+$btn-active-box-shadow: inset 0 3px 5px rgba($black, 0.125);
+
+//card
+$card-color: $black;
+$card-bg: $white;
+$card-box-shadow: 0 0.125rem 0.25rem rgba($black, 0.15);
+$card-border-radius: $border-radius;
+$card-border-width: 0;
+$card-border-color: transparent;

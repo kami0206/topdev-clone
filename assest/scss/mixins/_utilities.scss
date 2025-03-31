@@ -1,0 +1,117 @@
+@mixin generate-utility($utility, $infix: '', $is-rfs-media-query: false) {
+    // Lấy giá trị
+    $values: map-get($utility, values);
+
+    // Kiểm tra giá trị nếu không phải list -> tạo cặp giá trị
+    // Ví dụ: (1px) => ((1px 1px))
+    @if type-of($values) == 'string' or type-of(nth($values, 1)) != 'list' {
+        $values: zip($values, $values);
+    }
+
+    @each $key, $value in $values {
+        // Lấy ds thuộc tính
+        $properties: map-get($utility, property);
+
+        // Chuyển đổi thuộc tính -> list
+        @if type-of($properties) == 'string' {
+            $properties: append((), $properties);
+        }
+
+        // Lấy tên class
+        // Nếu không lấy thuộc tính -> tên
+        $property-class: if(
+            map-has-key($utility, class),
+            map-get($utility, class),
+            nth($properties, 1)
+        );
+        $property-class: if($property-class == null, '', $property-class);
+
+        // Lấy tên biến
+        $css-variable-name: if(
+            map-has-key($utility, css-variable-name),
+            map-get($utility, css-variable-name),
+            map-get($utility, class)
+        );
+
+        // Lấy trạng thái
+        $state: if(map-has-key($utility, state), map-get($utility, state), ());
+
+        // Điều chỉnh prefix
+        $infix: if(
+            $property-class == '' and str-slice($infix, 1, 1) == '-',
+            str-slice($infix, 2),
+            $infix
+        );
+
+        // Thêm tiền tố '-'
+        // Eg: lg -> -lg
+        $property-class-modifier: if(
+            $key,
+            if($property-class == '' and $infix == '', '', '-') + $key,
+            ''
+        );
+
+        // Responesive font size
+        @if map-get($utility, rfs) {
+            @if $is-rfs-media-query {
+                $val: rfs-value($value);
+
+                $value: if($val == rfs-fluid-value($value), null, $val);
+            } @else {
+                $value: rfs-fluid-value($value);
+            }
+        }
+
+        $is-css-var: map-get($utility, css-var);
+        $is-local-vars: map-get($utility, local-vars);
+        $is-rtl: map-get($utility, rtl);
+
+        // Tạo class
+        @if $value != null {
+            @if $is-rtl == false {
+                /* rtl:begin:remove */
+            }
+
+            // Sử dụng biến
+            @if $is-css-var {
+                .#{$property-class + $infix + $property-class-modifier} {
+                    --#{$css-variable-name}: #{$value};
+                }
+
+                @each $pseudo in $state {
+                    .#{$property-class
+                        + $infix
+                        + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+                        --#{$css-variable-name}: #{$value};
+                    }
+                }
+            } @else {
+                .#{$property-class + $infix + $property-class-modifier} {
+                    @each $property in $properties {
+                        @if $is-local-vars {
+                            @each $local-var, $variable in $is-local-vars {
+                                --#{$local-var}: #{$variable};
+                            }
+                        }
+                        #{$property}: $value;
+                    }
+                }
+
+                @each $pseudo in $state {
+                    .#{$property-class
+                        + $infix
+                        + $property-class-modifier}-#{$pseudo}:#{$pseudo} {
+                        @each $property in $properties {
+                            @if $is-local-vars {
+                                @each $local-var, $variable in $is-local-vars {
+                                    --#{$local-var}: #{$variable};
+                                }
+                            }
+                            #{$property}: $value;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.divider-line {
+    --td-line-color: #222631;
+    --td-line-width: 1px;
+    --td-line-style: dashed; /* Thay solid thành dashed */
+    width: 100%;
+    height: 0;
+    border-top: var(--td-line-width) var(--td-line-style) var(--td-line-color);
+    margin: 8px 0; /* Thêm margin để căn chỉnh khoảng cách */
+  }

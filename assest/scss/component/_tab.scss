@@ -1,0 +1,63 @@
+.tabs {
+    --#{$prefix}tabs-bg: #{$white};
+    --#{$prefix}tabs-color: #{$black};
+    --#{$prefix}tabs-direction: column;
+    --#{$prefix}tabs-nav-direction: column;
+    --#{$prefix}tabs-nav-align: center;
+    --#{$prefix}tabs-nav-justify: space-around;
+    --#{$prefix}tabs-nav-button-width: 100%;
+    --#{$prefix}btn-hover-bg: #{$primary0};
+    background-color: var(--#{$prefix}tabs-bg);
+    color: var(--#{$prefix}tabs-color);
+    display: flex;
+    flex-direction: var(--#{$prefix}tabs-direction);
+
+    @include media-breakpoint-up(lg) {
+        & {
+            --#{$prefix}tabs-direction: column;
+            --#{$prefix}tabs-nav-direction: row;
+            --#{$prefix}tabs-nav-button-width: auto;
+        }
+
+        &.tabs-nav-align-center {
+            --#{$prefix}tabs-nav-align: center;
+            --#{$prefix}tabs-nav-justify: center;
+        }
+        &.tabs-nav-align-start {
+            --#{$prefix}tabs-nav-align: center;
+            --#{$prefix}tabs-nav-justify: flex-start;
+        }
+        &.tabs-nav-vertical {
+            --#{$prefix}tabs-direction: row;
+            --#{$prefix}tabs-nav-direction: column;
+            --#{$prefix}tabs-nav-align: flex-start;
+            --#{$prefix}tabs-nav-justify: flex-start;
+            --#{$prefix}tabs-nav-button-width: 100%;
+        }
+    }
+
+    .tabs-nav {
+        display: flex;
+        flex-direction: var(--#{$prefix}tabs-nav-direction);
+        justify-content: var(--#{$prefix}tabs-nav-justify);
+        align-items: var(--#{$prefix}tabs-nav-align);
+
+        & > .tabs-nav-button {
+            width: var(--#{$prefix}tabs-nav-button-width);
+            white-space: nowrap;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    
+    .tabs-content {
+        flex-grow: 1;
+
+        &-panel {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}

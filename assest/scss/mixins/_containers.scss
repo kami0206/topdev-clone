@@ -1,0 +1,9 @@
+@mixin make-container($gutter: $container-padding-x) {
+    --gutter-x: #{$gutter};
+    --gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--gutter-x) * 0.5);
+    padding-left: calc(var(--gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}

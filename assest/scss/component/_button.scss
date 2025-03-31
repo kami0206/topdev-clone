@@ -1,0 +1,114 @@
+
+.btn {
+  --#{$prefix}btn-padding-x: #{$btn-padding-x};
+  --#{$prefix}btn-padding-y: #{$btn-padding-y};
+
+  --#{$prefix}btn-font-size: #{$btn-font-size};
+  --#{$prefix}btn-line-height: #{$btn-line-height};
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$prefix}btn-white-space: #{$btn-white-space};
+
+  --#{$prefix}btn-color: #{$btn-color};
+  --#{$prefix}btn-bg: #{$btn-bg};
+
+  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-border-color: #{$btn-border-color};
+  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
+
+  --#{$prefix}btn-hover-color: #{$btn-hover-color};
+  --#{$prefix}btn-hover-bg: #{$btn-hover-bg};
+
+  --#{$prefix}btn-focus-color: #{$btn-focus-color};
+  --#{$prefix}btn-focus-bg: #{$btn-focus-bg};
+  --#{$prefix}btn-focus-width: #{$btn-focus-width};
+  --#{$prefix}btn-focus-box-shadow: #{$btn-focus-box-shadow};
+
+  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+
+  display: inline-block;
+  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+  font-size: var(--#{$prefix}btn-font-size);
+  line-height: var(--#{$prefix}btn-line-height);
+  font-weight: var(--#{$prefix}btn-font-weight);
+  white-space: var(--#{$prefix}btn-white-space);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  color: var(--#{$prefix}btn-color);
+  background-color: var(--#{$prefix}btn-bg);
+  border: var(--#{$prefix}btn-border-width) solid
+    var(--#{$prefix}btn-border-color);
+  border-radius: var(--#{$prefix}btn-border-radius);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--#{$prefix}btn-hover-color);
+    background-color: var(--#{$prefix}btn-hover-bg);
+  }
+
+  &.active {
+    
+    text-decoration: none;
+    color: var(--#{$prefix}btn-hover-color);
+    background-color: $primary;
+  }
+
+  @each $name, $value in $colors {
+    &.btn-#{$name + ""} {
+      $text-color: if(lightness($value) > 50%, $dark, $white);
+      $hover-text-color: if(lightness($value) > 50%, $dark, $white);   
+      $hover-bg: if(
+        lightness($value) > 50%,
+        shade($value, 10%),
+        tint($value, 10%)
+      );
+
+      --#{$prefix}btn-color: #{$text-color};
+      --#{$prefix}btn-bg: #{$value};
+      --#{$prefix}btn-border-color: #{$value};
+      --#{$prefix}btn-hover-color: #{$hover-text-color};
+      --#{$prefix}btn-hover-bg: #{$hover-bg};
+      --#{$prefix}btn-hover-border-color: #{$hover-bg};
+    }
+  }
+  @each $name, $value in $colors {
+    &.btn-outline-#{"" + $name} {
+      // $hover-text-color: if(lightness($hover-bg) > 50%, $dark, $white);
+      $hover-text-color: if(lightness($value) > 50%, $dark, $white);
+      $hover-bg: if(
+        lightness($value) > 50%,
+        shade($value, 10%),
+        tint($value, 10%)
+      );
+
+      --#{$prefix}btn-color: #{$dark};
+      --#{$prefix}btn-bg: transparent;
+      --#{$prefix}btn-border-color: #{$value};
+      --#{$prefix}btn-hover-color: #{$hover-text-color};
+      --#{$prefix}btn-hover-bg: #{$hover-bg};
+      --#{$prefix}btn-hover-border-color: #{$hover-bg};
+    }
+  }
+
+  &.btn-outline-gar {
+    --#{$prefix}btn-color: #{$dark};
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-border-color: transparent;
+    --#{$prefix}btn-hover-bg: transparent;
+
+    background-image:  linear-gradient($white, $white), #{$gar};
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    &:hover {
+      background-image: #{$gar}, #{$gar};
+    }
+
+    &.active {
+      background-image: #{$gar}, #{$gar};
+    }
+    
+  }
+}
