@@ -1,8 +1,8 @@
 /*
  *  Owl Carousel - Core
  */
-.owl-carousel {
-	display: block;
+ .owl-carousel {
+	//display: none;
 	width: 100%;
 	-webkit-tap-highlight-color: transparent;
 	/* position relative and z-index fix webkit rendering fonts issue */
@@ -30,7 +30,6 @@
 		overflow: hidden;
 		/* fix for flashing background */
 		-webkit-transform: translate3d(0px, 0px, 0px);
-		transform: translate3d(0px, 0px, 0px);
 	}
 
 	.owl-wrapper,
@@ -48,14 +47,13 @@
 		min-height: 1px;
 		float: left;
 		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
 		-webkit-tap-highlight-color: transparent;
 		-webkit-touch-callout: none;
 	}
-	// .owl-item img {
-	// 	// display: block;
-	// 	// width: 100%;
-	// }
+	.owl-item img {
+		display: block;
+		//width: 100%;
+	}
 
 	.owl-nav.disabled,
 	.owl-dots.disabled {

@@ -1,33 +1,120 @@
-.slider {
-    position: relative;
-    display: flex;
-    justify-content: center; // Căn giữa slider
-    align-items: center;
-  
-    .owl-carousel {
-        display: flex;
-        align-items: center;
-    
-        .owl-item {
-          cursor: grab;
-        }
-    
-        .owl-item:last-child {
-          margin-right: 0; // Xóa khoảng cách của item cuối cùng
-        }
-      }
+// Reset Owl Carousel
+.owl-carousel {
+    .owl-dots {
+        z-index: 1;
+    }
 
-    
-      // Responsive adjustments
-      @media (max-width: 1024px) {
-        .owl-carousel .owl-item {
-          margin-right: 15px; // Giảm khoảng cách trên màn hình trung bình
+    .owl-nav {
+        z-index: 2;
+    }
+}
+// End Reset Owl Carousel
+
+// Custom Owl Carousel
+.owl-carousel {
+    &.owl-carousel-with-side-nav {
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .owl-prev,
+            .owl-next {
+                width: 48px;
+                height: 48px;
+                background-color: $neutral-gray6;
+                opacity: 0.8;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+                line-height: 1;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
-      }
-    
-      @media (max-width: 768px) {
-        .owl-carousel .owl-item {
-          margin-right: 10px; // Giảm khoảng cách trên màn hình nhỏ
+    }
+
+    &.owl-carousel-with-dots-nav {
+        .owl-nav,
+        .owl-dots {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 100%;
+            margin: 0;
+            height: 2rem;
         }
-      }
-  }
+
+        .owl-nav {
+            justify-content: space-between;
+            
+            .owl-prev,
+            .owl-next {
+                width: 2rem;
+                height: 2rem;
+                margin: 0;
+                background-color: transparent;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $black;
+                border: 1px solid $black;
+                font-size: 1.5rem;
+                line-height: 1;
+                font-weight: bold;
+                transition: all 0.3s ease-in-out;
+
+                &.disabled {
+                    border-color: $primary0;
+                    color: $primary0;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                    border-color: $primary;
+                    color: $primary;
+                }
+            }
+        }
+
+        .owl-dots {
+            // padding: 0 calc(2rem + 4px);
+            display: flex;
+            gap: 0.25rem;
+          
+            .owl-dot {
+                span {
+                    margin: 0;
+                    height: 0.5rem;
+                    width: 0.5rem;
+                    border-radius: 50%;
+                    background-color: $primary0;
+                    transition: all 0.3s ease-in-out;
+                }
+                &.active {
+                    span {
+                        border-radius: 1rem;
+                        width: 1rem;
+                        background-color: $primary;
+                    }
+                }
+
+                &:hover {
+                    span {
+                        background-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

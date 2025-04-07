@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Clone TopDev</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="assets/scss/styles.css" />
+        <link
+            rel="stylesheet"
+            href="assets/lib/owl-carousel-2/src/scss/owl.carousel.css"
+        />
+        <link
+            rel="stylesheet"
+            href="assets/lib/owl-carousel-2/src/scss/owl.theme.default.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="h-100">
+        <header id="header-section" class="position-sticky top-0 bg-white">
+            <div class="header-top">
+                <div
+                    class="container py-2 d-flex gap-16 justify-content-between align-items-center"
+                >
+                    <div class="nav-links">
+                        <a class="nav-link" href=""
+                            ><span class="botton-label">Việc Làm IT</span></a
+                        >
+                        <a class="nav-link" href=""
+                            ><span class="botton-label">Tạo CV</span></a
+                        >
+                        <a class="nav-link" href=""
+                            ><span class="botton-label">Công Ty ID</span></a
+                        >
+                        <a class="nav-link" href=""
+                            ><span class="botton-label"
+                                >Trắc Nghiệm Tính Cách</span
+                            ></a
+                        >
+                        <a class="nav-link" href=""
+                            ><span class="botton-label">Blog</span></a
+                        >
+                        <a class="nav-link" href=""
+                            ><span class="botton-label">Việc Làm IT</span
+                            ><span class="botton-label text-gradient">
+                                Fresher</span
+                            ></a
+                        >
+                    </div>
+                    <div class="header-infomation">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-phone fs-6"></i>
+                            <span class="body-2">028.6273.3496</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-user-tie fs-6"></i>
+                            <span class="body-2">Tuyển dụng</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-envelope fs-6"></i>
+                            <span class="body-2">Liên hệ</span>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <img
+                            class="rounded-circle size-6"
+                            src="assets/image/header/img_lang_en.png"
+                            alt="English"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div
+                    class="container py-4 d-flex align-items-center justify-content-between"
+                >
+                    <div
+                        class="sidebar-left d-flex flex-grow-1 align-items-center"
+                    >
+                        <a href="#">
+                            <img
+                                src="assets/image/header/img_logo.png"
+                                alt="Logo"
+                            />
+                        </a>
+                    </div>
+                    <div class="sidebar-right flex-grow-1 flex-xxl-grow-0">
+                        <div
+                            class="d-flex flex-xxl-row-reverse align-items-center justify-content-between"
+                        >
+                            <div
+                                class="profile d-flex align-items-center justify-content-center"
+                            >
+                                <div
+                                    class="dropdown dropdown-left js-dropdown-profile px-2 py-1"
+                                >
+                                    <div
+                                        class="dropdown-toggle gap-4 js-dropdown-toggle"
+                                    >
+                                        <div class="rounded-full size-10">
+                                            <img
+                                                src="assets/image/header/img_avatar.png"
+                                                alt="Avatar"
+                                            />
+                                        </div>
+                                        <div class="text-start">
+                                            <p class="small-headline">
+                                                Nguyễn Tấn Đạt
+                                            </p>
+                                            <p class="botton-label">UI UX</p>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <ul class="dropdown-menu js-dropdown-menu">
+                                        <li
+                                            class="dropdown-item js-dropdown-item"
+                                        >
+                                            <a href="#" class="nav-link"
+                                                >Option 1</a
+                                            >
+                                        </li>
+                                        <li
+                                            class="dropdown-item js-dropdown-item"
+                                        >
+                                            <a href="#" class="nav-link"
+                                                >Option 2</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="notification">
+                                <i class="fa-solid fa-bell fs-6"></i>
+                                <span class="notification-count">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main py-8">
+            <section id="hero-section" class="mb-16">
+                <div
+                    class="container d-flex flex-column align-items-center gap-8 py-16"
+                >
+                    <img
+                        class="img_banner"
+                        src="assets/image/hero-section/img_banner.png"
+                        alt="Banner"
+                    />
+                    <div class="row justify-content-center gx-3 w-100">
+                        <div
+                            class="col-12 col-md-4 col-xxl-6 text-center mb-2 mb-md-0"
+                        >
+                            <div class="input bg-neutral-1 w-100">
+                                <input
+                                    type="text"
+                                    class="form-control body-1"
+                                    placeholder="Công việc bạn đang tìm kiếm là gì"
+                                />
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xxl-2 text-center">
+                            <div class="dropdown js-dropdown-position w-100">
+                                <button
+                                    class="dropdown-toggle btn btn-neutral-1 py-3 px-4 w-100 border-0 js-dropdown-toggle d-flex align-items-center justify-content-between"
+                                >
+                                    <div
+                                        class="d-flex align-items-center gap-2"
+                                    >
+                                        <i
+                                            class="fa-solid fa-location-dot fs-6 ms-sm-6"
+                                        ></i>
+                                        <span class="body-1">Vị trí</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu js-dropdown-menu">
+                                    <li class="dropdown-item js-dropdown-item">
+                                        <a href="#" class="nav-link"
+                                            >Option 1</a
+                                        >
+                                    </li>
+                                    <li class="dropdown-item js-dropdown-item">
+                                        <a href="#" class="nav-link"
+                                            >Option 2</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-xxl-2 text-center">
+                            <button class="btn btn-dark py-3 border-0 w-100">
+                                <span class="botton-label text-nowrap"
+                                    >Tìm kiếm</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-center w-100">
+                        <div
+                            class="js-owl-carousel-hero-features owl-carousel-hero-features owl-carousel owl-theme d-flex justify-content-center"
+                        >
+                            <button class="btn btn-outline-gradient py-2 px-4">
+                                <span class="small-headline">New Job</span>
+                            </button>
+                            <button class="btn btn-outline-gradient py-2 px-4">
+                                <span class="small-headline">Part Time</span>
+                            </button>
+                            <button class="btn btn-outline-gradient py-2 px-4">
+                                <span class="small-headline">Full Time</span>
+                            </button>
+                            <button class="btn btn-outline-gradient py-2 px-4">
+                                <span class="small-headline"
+                                    >Work from Home</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="super-spotlight-companies-section" class="mb-16">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-3 gx-lg-16">
+                            <h2 class="heading-2 mb-4">Danh mục</h2>
+                            <div class="row">
+                                <div class="col-6 col-lg-12">
+                                    <button
+                                        class="btn btn-neutral-1 p-2 w-100 text-start mb-2"
+                                    >
+                                        <span class="text-nowrap small-headline"
+                                            >Việc làm IT</span
+                                        >
+                                    </button>
+                                </div>
+                                <div class="col-6 col-lg-12">
+                                    <button
+                                        class="btn btn-neutral-1 p-2 w-100 text-start mb-2"
+                                    >
+                                        <span class="text-nowrap small-headline"
+                                            >Tạo CV</span
+                                        >
+                                    </button>
+                                </div>
+                                <div class="col-6 col-lg-12">
+                                    <button
+                                        class="btn btn-neutral-1 p-2 w-100 text-start mb-2"
+                                    >
+                                        <span class="text-nowrap small-headline"
+                                            >Công ty IT</span
+                                        >
+                                    </button>
+                                </div>
+                                <div class="col-6 col-lg-12">
+                                    <button
+                                        class="btn btn-neutral-1 p-2 w-100 text-start mb-2"
+                                    >
+                                        <span class="text-nowrap small-headline"
+                                            >Trắc nghiệm tính cách</span
+                                        >
+                                    </button>
+                                </div>
+                                <div class="col-6 col-lg-12">
+                                    <button
+                                        class="btn btn-neutral-1 p-2 w-100 text-start mb-2"
+                                    >
+                                        <span class="text-nowrap small-headline"
+                                            >Blog</span
+                                        >
+                                    </button>
+                                </div>
+                                <div class="col-6 col-lg-12">
+                                    <button
+                                        class="btn btn-neutral-1 p-2 w-100 text-start mb-2"
+                                    >
+                                        <span class="text-nowrap small-headline"
+                                            >Việc làm IT</span
+                                        ><span
+                                            class="botton-label text-gradient"
+                                        >
+                                            Fresher</span
+                                        >
+                                    </button>
+                                </div>
+                                <div class="col-12">
+                                    <button
+                                        class="btn btn-white p-2 w-100 text-lg-start text-center mb-2"
+                                    >
+                                        <span class="text-nowrap small-headline"
+                                            >Xem thêm</span
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <h2 class="heading-2 mb-4">Công ty nổi bật</h2>
+                            <div
+                                class="slider-brand mb-4 d-flex js-owl-carousel-brand owl-carousel owl-theme owl-loaded"
+                            >
+                                <div
+                                    class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+                                >
+                                    <img
+                                        src="assets/image/spotlight-section/logo/img_logo_tdtasia.png"
+                                        alt="TDT"
+                                    />
+                                </div>
+                                <div
+                                    class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+                                >
+                                    <img
+                                        src="assets/image/spotlight-section/logo/img_logo_acb.png"
+                                        alt="TDT"
+                                    />
+                                </div>
+                                <div
+                                    class="brand-item px-2 py-1 border border-1 border-neutral-6 rounded-4 d-flex align-items-center"
+                                >
+                                    <img
+                                        src="assets/image/spotlight-section/logo/img_logo_applancer.png"
+                                        alt="TDT"
+                                    />
+                                </div>
+                            </div>
+                            <div class="p-2">
+                                <div class="row">
+                                    <div class="col-12 col-md-7">
+                                        <img
+                                            class="w-100 rounded-4"
+                                            src="assets/image/spotlight-section/thumb-job/img_thumb_mgm_job.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-5 d-flex flex-column justify-content-between"
+                                    >
+                                        <div class="">
+                                            <h1
+                                                class="heading-1 text-primary-0 mb-4"
+                                            >
+                                                mgm technology partners Vietnam
+                                            </h1>
+                                            <h2
+                                                class="heading-2 text-primary-0 mb-4"
+                                            >
+                                                Up to 5000$
+                                            </h2>
+                                            <p
+                                                class="description text-neutral-6"
+                                            >
+                                                Đà Nẵng, Hồ Chí Minh
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <span
+                                                class="text-primary-0 heading-2"
+                                                >8 Job</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <h2 class="heading-2 mb-4">Đề xuất cho bạn</h2>
+                            <div
+                                class="js-owl-carousel-card-job-dots owl-carousel owl-theme"
+                            >
+                                <div class="card card-job">
+                                    <div class="card-header gap-4">
+                                        <div class="card-logo">
+                                            <img
+                                                src="/assets/image/spotlight-section/logo/img_logo_chotot.png"
+                                                alt="Logo"
+                                            />
+                                        </div>
+                                        <div class="card-title">
+                                            <h2 class="display-2">
+                                                Product Manager
+                                            </h2>
+                                            <p class="text-primary extra-small">
+                                                Up to 500$
+                                            </p>
+                                        </div>
+                                        <i
+                                            class="fa-solid fa-bookmark fs-4"
+                                        ></i>
+                                    </div>
+                                    <div
+                                        class="line line-dashed-x2 line-neutral-5 my-5"
+                                    ></div>
+                                    <div class="card-body gap-2">
+                                        <div
+                                            class="d-flex gap-4 text-neutral-7"
+                                        >
+                                            <span
+                                                ><i
+                                                    class="fa-solid fa-laptop-file fs-4"
+                                                ></i>
+                                                Remote</span
+                                            >
+                                            <span
+                                                ><i
+                                                    class="fa-regular fa-clock fs-4"
+                                                ></i>
+                                                Full Time</span
+                                            >
+                                        </div>
+                                        <p class="card-body-description">
+                                            Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit.
+                                            Laboriosam impedit expedita
+                                            reprehenderit non cupiditate totam
+                                            similique sit molestias officia
+                                            repellat quasi amet iure, eum velit.
+                                            Impedit veniam amet ex cumque?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card card-job">
+                                    <div class="card-header gap-4">
+                                        <div class="card-logo">
+                                            <img
+                                                src="/assets/image/spotlight-section/logo/img_logo_ivc.png"
+                                                alt="Logo"
+                                            />
+                                        </div>
+                                        <div class="card-title">
+                                            <h2 class="display-2">
+                                                Product Manager
+                                            </h2>
+                                            <p class="text-primary extra-small">
+                                                Up to 500$
+                                            </p>
+                                        </div>
+                                        <i
+                                            class="fa-solid fa-bookmark fs-4"
+                                        ></i>
+                                    </div>
+                                    <div
+                                        class="line line-dashed-x2 line-neutral-5 my-5"
+                                    ></div>
+                                    <div class="card-body gap-2">
+                                        <div
+                                            class="d-flex gap-4 text-neutral-7"
+                                        >
+                                            <span
+                                                ><i
+                                                    class="fa-solid fa-laptop-file fs-4"
+                                                ></i>
+                                                Remote</span
+                                            >
+                                            <span
+                                                ><i
+                                                    class="fa-regular fa-clock fs-4"
+                                                ></i>
+                                                Full Time</span
+                                            >
+                                        </div>
+                                        <p class="card-body-description">
+                                            Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit.
+                                            Laboriosam impedit expedita
+                                            reprehenderit non cupiditate totam
+                                            similique sit molestias officia
+                                            repellat quasi amet iure, eum velit.
+                                            Impedit veniam amet ex cumque?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card card-job">
+                                    <div class="card-header gap-4">
+                                        <div class="card-logo">
+                                            <img
+                                                src="/assets/image/spotlight-section/logo/img_logo_viettel.png"
+                                                alt="Logo"
+                                            />
+                                        </div>
+                                        <div class="card-title">
+                                            <h2 class="display-2">
+                                                Product Manager
+                                            </h2>
+                                            <p class="text-primary extra-small">
+                                                Up to 500$
+                                            </p>
+                                        </div>
+                                        <i
+                                            class="fa-solid fa-bookmark fs-4"
+                                        ></i>
+                                    </div>
+                                    <div
+                                        class="line line-dashed-x2 line-neutral-5 my-5"
+                                    ></div>
+                                    <div class="card-body gap-2">
+                                        <div
+                                            class="d-flex gap-4 text-neutral-7"
+                                        >
+                                            <span
+                                                ><i
+                                                    class="fa-solid fa-laptop-file fs-4"
+                                                ></i>
+                                                Remote</span
+                                            >
+                                            <span
+                                                ><i
+                                                    class="fa-regular fa-clock fs-4"
+                                                ></i>
+                                                Full Time</span
+                                            >
+                                        </div>
+                                        <p class="card-body-description">
+                                            Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit.
+                                            Laboriosam impedit expedita
+                                            reprehenderit non cupiditate totam
+                                            similique sit molestias officia
+                                            repellat quasi amet iure, eum velit.
+                                            Impedit veniam amet ex cumque?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="featured-companies-section" class="mb-16">
+                <div class="container">
+                    <h1 class="heading-1 text-gradient mb-8">
+                        Nhà tuyển dụng hàng đầu
+                    </h1>
+                    <div
+                        class="owl-carousel-featured-companies js-owl-carousel-featured-companies owl-carousel owl-theme"
+                    >
+                        <div
+                            class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+                        >
+                            <img
+                                src="assets/image/spotlight-section/logo/img_logo_tdtasia.png"
+                                alt="TDT"
+                            />
+                        </div>
+                        <div
+                            class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+                        >
+                            <img
+                                src="assets/image/spotlight-section/logo/img_logo_daoukiwoom.png"
+                                alt="TDT"
+                            />
+                        </div>
+                        <div
+                            class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+                        >
+                            <img
+                                src="assets/image/spotlight-section/logo/img_logo_acb.png"
+                                alt="TDT"
+                            />
+                        </div>
+                        <div
+                            class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+                        >
+                            <img
+                                src="assets/image/spotlight-section/logo/img_logo_talentsuccess.png"
+                                alt="TDT"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="super-hot-job-today-section" class="mb-16 py-4">
+                <div class="container py-8">
+                    <div class="text-center mb-10">
+                        <h1 class="heading-1 text-gradient">
+                            Công Việc Hot Hôm Nay
+                        </h1>
+                    </div>
+                    <div
+                        class="js-owl-carousel-hot-job owl-carousel-with-side-nav owl-carousel owl-theme"
+                    >
+                        <div class="card card-job">
+                            <div class="card-header gap-4">
+                                <div class="card-logo">
+                                    <img
+                                        src="/assets/image/spotlight-section/logo/img_logo_chotot.png"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="card-title">
+                                    <h2 class="display-2">Product Manager</h2>
+                                    <p class="text-primary extra-small">
+                                        Up to 500$
+                                    </p>
+                                </div>
+                                <i class="fa-solid fa-bookmark fs-4"></i>
+                            </div>
+                            <div
+                                class="line line-dashed-x2 line-neutral-5 my-5"
+                            ></div>
+                            <div class="card-body gap-2">
+                                <div class="d-flex gap-4 text-neutral-7">
+                                    <span
+                                        ><i
+                                            class="fa-solid fa-laptop-file fs-4"
+                                        ></i>
+                                        Remote</span
+                                    >
+                                    <span
+                                        ><i
+                                            class="fa-regular fa-clock fs-4"
+                                        ></i>
+                                        Full Time</span
+                                    >
+                                </div>
+                                <p class="card-body-description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Laboriosam impedit
+                                    expedita reprehenderit non cupiditate totam
+                                    similique sit molestias officia repellat
+                                    quasi amet iure, eum velit. Impedit veniam
+                                    amet ex cumque?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card card-job">
+                            <div class="card-header gap-4">
+                                <div class="card-logo">
+                                    <img
+                                        src="/assets/image/spotlight-section/logo/img_logo_ivc.png"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="card-title">
+                                    <h2 class="display-2">Product Manager</h2>
+                                    <p class="text-primary extra-small">
+                                        Up to 500$
+                                    </p>
+                                </div>
+                                <i class="fa-solid fa-bookmark fs-4"></i>
+                            </div>
+                            <div
+                                class="line line-dashed-x2 line-neutral-5 my-5"
+                            ></div>
+                            <div class="card-body gap-2">
+                                <div class="d-flex gap-4 text-neutral-7">
+                                    <span
+                                        ><i
+                                            class="fa-solid fa-laptop-file fs-4"
+                                        ></i>
+                                        Remote</span
+                                    >
+                                    <span
+                                        ><i
+                                            class="fa-regular fa-clock fs-4"
+                                        ></i>
+                                        Full Time</span
+                                    >
+                                </div>
+                                <p class="card-body-description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Laboriosam impedit
+                                    expedita reprehenderit non cupiditate totam
+                                    similique sit molestias officia repellat
+                                    quasi amet iure, eum velit. Impedit veniam
+                                    amet ex cumque?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card card-job">
+                            <div class="card-header gap-4">
+                                <div class="card-logo">
+                                    <img
+                                        src="/assets/image/spotlight-section/logo/img_logo_viettel.png"
+                                        alt="Logo"
+                                    />
+                                </div>
+                                <div class="card-title">
+                                    <h2 class="display-2">Product Manager</h2>
+                                    <p class="text-primary extra-small">
+                                        Up to 500$
+                                    </p>
+                                </div>
+                                <i class="fa-solid fa-bookmark fs-4"></i>
+                            </div>
+                            <div
+                                class="line line-dashed-x2 line-neutral-5 my-5"
+                            ></div>
+                            <div class="card-body gap-2">
+                                <div class="d-flex gap-4 text-neutral-7">
+                                    <span
+                                        ><i
+                                            class="fa-solid fa-laptop-file fs-4"
+                                        ></i>
+                                        Remote</span
+                                    >
+                                    <span
+                                        ><i
+                                            class="fa-regular fa-clock fs-4"
+                                        ></i>
+                                        Full Time</span
+                                    >
+                                </div>
+                                <p class="card-body-description">
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Laboriosam impedit
+                                    expedita reprehenderit non cupiditate totam
+                                    similique sit molestias officia repellat
+                                    quasi amet iure, eum velit. Impedit veniam
+                                    amet ex cumque?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="featured-suggestions-section" class="mb-16">
+                <div class="container">
+                    <h1 class="heading-1 mb-4">
+                        Gợi ý <span class="text-primary">nổi bật</span>
+                    </h1>
+                    <div
+                        class="tabs-featured-suggestion tabs tabs-nav-align-start js-tabs-job"
+                    >
+                        <div
+                            class="js-owl-carousel-tabs owl-carousel owl-theme tabs-nav gap-3 mb-4"
+                        >
+                            <button
+                                class="tabs-nav-button btn btn-neutral-1 px-4 py-2 me-2 js-tab-button"
+                                data-tab-target="#tab-job-1"
+                            >
+                                <span class="botton-label">Tất cả</span>
+                            </button>
+                            <button
+                                class="tabs-nav-button btn btn-neutral-1 px-4 py-2 me-2 js-tab-button"
+                                data-tab-target="#tab-job-2"
+                            >
+                                <span class="botton-label">Quận 1</span>
+                            </button>
+                            <button
+                                class="tabs-nav-button btn btn-neutral-1 px-4 py-2 me-2 js-tab-button"
+                                data-tab-target="#tab-job-3"
+                            >
+                                <span class="botton-label">Quận 2</span>
+                            </button>
+                            <button
+                                class="tabs-nav-button btn btn-neutral-1 px-4 py-2 me-2 js-tab-button"
+                                data-tab-target="#tab-job-4"
+                            >
+                                <span class="botton-label">Quận 3</span>
+                            </button>
+                            <button
+                                class="tabs-nav-button btn btn-neutral-1 px-4 py-2 me-2 js-tab-button"
+                                data-tab-target="#tab-job-5"
+                            >
+                                <span class="botton-label">Quận 4</span>
+                            </button>
+                            <button
+                                class="tabs-nav-button btn btn-neutral-1 px-4 py-2 me-2 js-tab-button"
+                                data-tab-target="#tab-job-6"
+                            >
+                                <span class="botton-label">Quận 6</span>
+                            </button>
+                            <button
+                                class="tabs-nav-button btn btn-neutral-1 px-4 py-2 me-2 js-tab-button"
+                                data-tab-target="#tab-job-7"
+                            >
+                                <span class="botton-label">Quận 8</span>
+                            </button>
+                        </div>
+                        <div class="tabs-content">
+                            <div
+                                id="tab-job-1"
+                                class="tabs-content-panel js-tab-panel"
+                            >
+                                <div class="row">
+                                    <div
+                                        class="col-12 col-md-6 col-lg-4 col-xl-3"
+                                    >
+                                        <div class="card card-job">
+                                            <div class="card-header gap-4">
+                                                <div class="card-logo">
+                                                    <img
+                                                        src="/assets/image/spotlight-section/logo/img_logo_chotot.png"
+                                                        alt="Logo"
+                                                    />
+                                                </div>
+                                                <div class="card-title">
+                                                    <h2 class="display-2">
+                                                        Product Manager
+                                                    </h2>
+                                                    <p
+                                                        class="text-primary extra-small"
+                                                    >
+                                                        Up to 500$
+                                                    </p>
+                                                </div>
+                                                <i
+                                                    class="fa-solid fa-bookmark fs-4"
+                                                ></i>
+                                            </div>
+                                            <div
+                                                class="line line-dashed-x2 line-neutral-5 my-5"
+                                            ></div>
+                                            <div class="card-body gap-2">
+                                                <div
+                                                    class="d-flex gap-4 text-neutral-7"
+                                                >
+                                                    <span
+                                                        ><i
+                                                            class="fa-solid fa-laptop-file fs-4"
+                                                        ></i>
+                                                        Remote</span
+                                                    >
+                                                    <span
+                                                        ><i
+                                                            class="fa-regular fa-clock fs-4"
+                                                        ></i>
+                                                        Full Time</span
+                                                    >
+                                                </div>
+                                                <p
+                                                    class="card-body-description"
+                                                >
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing
+                                                    elit. Laboriosam impedit
+                                                    expedita reprehenderit non
+                                                    cupiditate totam similique
+                                                    sit molestias officia
+                                                    repellat quasi amet iure,
+                                                    eum velit. Impedit veniam
+                                                    amet ex cumque?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-6 col-lg-4 col-xl-3"
+                                    >
+                                        <div class="card card-job">
+                                            <div class="card-header gap-4">
+                                                <div class="card-logo">
+                                                    <img
+                                                        src="/assets/image/spotlight-section/logo/img_logo_chotot.png"
+                                                        alt="Logo"
+                                                    />
+                                                </div>
+                                                <div class="card-title">
+                                                    <h2 class="display-2">
+                                                        Product Manager
+                                                    </h2>
+                                                    <p
+                                                        class="text-primary extra-small"
+                                                    >
+                                                        Up to 500$
+                                                    </p>
+                                                </div>
+                                                <i
+                                                    class="fa-solid fa-bookmark fs-4"
+                                                ></i>
+                                            </div>
+                                            <div
+                                                class="line line-dashed-x2 line-neutral-5 my-5"
+                                            ></div>
+                                            <div class="card-body gap-2">
+                                                <div
+                                                    class="d-flex gap-4 text-neutral-7"
+                                                >
+                                                    <span
+                                                        ><i
+                                                            class="fa-solid fa-laptop-file fs-4"
+                                                        ></i>
+                                                        Remote</span
+                                                    >
+                                                    <span
+                                                        ><i
+                                                            class="fa-regular fa-clock fs-4"
+                                                        ></i>
+                                                        Full Time</span
+                                                    >
+                                                </div>
+                                                <p
+                                                    class="card-body-description"
+                                                >
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing
+                                                    elit. Laboriosam impedit
+                                                    expedita reprehenderit non
+                                                    cupiditate totam similique
+                                                    sit molestias officia
+                                                    repellat quasi amet iure,
+                                                    eum velit. Impedit veniam
+                                                    amet ex cumque?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-6 col-lg-4 col-xl-3"
+                                    >
+                                        <div class="card card-job">
+                                            <div class="card-header gap-4">
+                                                <div class="card-logo">
+                                                    <img
+                                                        src="/assets/image/spotlight-section/logo/img_logo_chotot.png"
+                                                        alt="Logo"
+                                                    />
+                                                </div>
+                                                <div class="card-title">
+                                                    <h2 class="display-2">
+                                                        Product Manager
+                                                    </h2>
+                                                    <p
+                                                        class="text-primary extra-small"
+                                                    >
+                                                        Up to 500$
+                                                    </p>
+                                                </div>
+                                                <i
+                                                    class="fa-solid fa-bookmark fs-4"
+                                                ></i>
+                                            </div>
+                                            <div
+                                                class="line line-dashed-x2 line-neutral-5 my-5"
+                                            ></div>
+                                            <div class="card-body gap-2">
+                                                <div
+                                                    class="d-flex gap-4 text-neutral-7"
+                                                >
+                                                    <span
+                                                        ><i
+                                                            class="fa-solid fa-laptop-file fs-4"
+                                                        ></i>
+                                                        Remote</span
+                                                    >
+                                                    <span
+                                                        ><i
+                                                            class="fa-regular fa-clock fs-4"
+                                                        ></i>
+                                                        Full Time</span
+                                                    >
+                                                </div>
+                                                <p
+                                                    class="card-body-description"
+                                                >
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing
+                                                    elit. Laboriosam impedit
+                                                    expedita reprehenderit non
+                                                    cupiditate totam similique
+                                                    sit molestias officia
+                                                    repellat quasi amet iure,
+                                                    eum velit. Impedit veniam
+                                                    amet ex cumque?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-6 col-lg-4 col-xl-3"
+                                    >
+                                        <div class="card card-job">
+                                            <div class="card-header gap-4">
+                                                <div class="card-logo">
+                                                    <img
+                                                        src="/assets/image/spotlight-section/logo/img_logo_chotot.png"
+                                                        alt="Logo"
+                                                    />
+                                                </div>
+                                                <div class="card-title">
+                                                    <h2 class="display-2">
+                                                        Product Manager
+                                                    </h2>
+                                                    <p
+                                                        class="text-primary extra-small"
+                                                    >
+                                                        Up to 500$
+                                                    </p>
+                                                </div>
+                                                <i
+                                                    class="fa-solid fa-bookmark fs-4"
+                                                ></i>
+                                            </div>
+                                            <div
+                                                class="line line-dashed-x2 line-neutral-5 my-5"
+                                            ></div>
+                                            <div class="card-body gap-2">
+                                                <div
+                                                    class="d-flex gap-4 text-neutral-7"
+                                                >
+                                                    <span
+                                                        ><i
+                                                            class="fa-solid fa-laptop-file fs-4"
+                                                        ></i>
+                                                        Remote</span
+                                                    >
+                                                    <span
+                                                        ><i
+                                                            class="fa-regular fa-clock fs-4"
+                                                        ></i>
+                                                        Full Time</span
+                                                    >
+                                                </div>
+                                                <p
+                                                    class="card-body-description"
+                                                >
+                                                    Lorem ipsum dolor sit amet,
+                                                    consectetur adipisicing
+                                                    elit. Laboriosam impedit
+                                                    expedita reprehenderit non
+                                                    cupiditate totam similique
+                                                    sit molestias officia
+                                                    repellat quasi amet iure,
+                                                    eum velit. Impedit veniam
+                                                    amet ex cumque?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="blog-section" class="mb-8">
+                <div class="container">
+                    <h1 class="heading-1 mb-8">Blog</h1>
+
+                    <div
+                        class="js-owl-carousel-blog owl-carousel-with-dots-nav js-owl-carousel-with-dots-nav owl-carousel owl-theme"
+                    >
+                        <div class="card card-blog gap-4 pb-3">
+                            <div class="card-badge">Design</div>
+                            <img
+                                src="assets/image/blog-section/img_blog_1.jpg"
+                                alt="Blog 1"
+                                class="card-img-top"
+                            />
+                            <div class="card-body px-4 py-1 gap-3">
+                                <div class="d-flex flex-column gap-3 me-18">
+                                    <h2 class="display-2">
+                                        How to build a great team of marketing
+                                        experts
+                                    </h2>
+                                    <p class="body-1 text-neutral-7">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Mi gravida.
+                                    </p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-between align-items-center"
+                                >
+                                    <div class="small-headline text-neutral-6">
+                                        Juni 27, 2022
+                                    </div>
+                                    <div
+                                        class="small-headline text-primary cursor-pointer"
+                                    >
+                                        Read More &#9658;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-blog gap-4 pb-3">
+                            <div class="card-badge">Design</div>
+                            <img
+                                src="assets/image/blog-section/img_blog_1.jpg"
+                                alt="Blog 1"
+                                class="card-img-top"
+                            />
+                            <div class="card-body px-4 py-1 gap-3">
+                                <div class="d-flex flex-column gap-3 me-18">
+                                    <h2 class="display-2">
+                                        How to build a great team of marketing
+                                        experts
+                                    </h2>
+                                    <p class="body-1 text-neutral-7">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Mi gravida.
+                                    </p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-between align-items-center"
+                                >
+                                    <div class="small-headline text-neutral-6">
+                                        Juni 27, 2022
+                                    </div>
+                                    <div
+                                        class="small-headline text-primary cursor-pointer"
+                                    >
+                                        Read More &#9658;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-blog gap-4 pb-3">
+                            <div class="card-badge">Design</div>
+                            <img
+                                src="assets/image/blog-section/img_blog_1.jpg"
+                                alt="Blog 1"
+                                class="card-img-top"
+                            />
+                            <div class="card-body px-4 py-1 gap-3">
+                                <div class="d-flex flex-column gap-3 me-18">
+                                    <h2 class="display-2">
+                                        How to build a great team of marketing
+                                        experts
+                                    </h2>
+                                    <p class="body-1 text-neutral-7">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Mi gravida.
+                                    </p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-between align-items-center"
+                                >
+                                    <div class="small-headline text-neutral-6">
+                                        Juni 27, 2022
+                                    </div>
+                                    <div
+                                        class="small-headline text-primary cursor-pointer"
+                                    >
+                                        Read More &#9658;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-blog gap-4 pb-3">
+                            <div class="card-badge">Design</div>
+                            <img
+                                src="assets/image/blog-section/img_blog_1.jpg"
+                                alt="Blog 1"
+                                class="card-img-top"
+                            />
+                            <div class="card-body px-4 py-1 gap-3">
+                                <div class="d-flex flex-column gap-3 me-18">
+                                    <h2 class="display-2">
+                                        How to build a great team of marketing
+                                        experts
+                                    </h2>
+                                    <p class="body-1 text-neutral-7">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Mi gravida.
+                                    </p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-between align-items-center"
+                                >
+                                    <div class="small-headline text-neutral-6">
+                                        Juni 27, 2022
+                                    </div>
+                                    <div
+                                        class="small-headline text-primary cursor-pointer"
+                                    >
+                                        Read More &#9658;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-blog gap-4 pb-3">
+                            <div class="card-badge">Design</div>
+                            <img
+                                src="assets/image/blog-section/img_blog_1.jpg"
+                                alt="Blog 1"
+                                class="card-img-top"
+                            />
+                            <div class="card-body px-4 py-1 gap-3">
+                                <div class="d-flex flex-column gap-3 me-18">
+                                    <h2 class="display-2">
+                                        How to build a great team of marketing
+                                        experts
+                                    </h2>
+                                    <p class="body-1 text-neutral-7">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Mi gravida.
+                                    </p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-between align-items-center"
+                                >
+                                    <div class="small-headline text-neutral-6">
+                                        Juni 27, 2022
+                                    </div>
+                                    <div
+                                        class="small-headline text-primary cursor-pointer"
+                                    >
+                                        Read More &#9658;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-blog gap-4 pb-3">
+                            <div class="card-badge">Design</div>
+                            <img
+                                src="assets/image/blog-section/img_blog_1.jpg"
+                                alt="Blog 1"
+                                class="card-img-top"
+                            />
+                            <div class="card-body px-4 py-1 gap-3">
+                                <div class="d-flex flex-column gap-3 me-18">
+                                    <h2 class="display-2">
+                                        How to build a great team of marketing
+                                        experts
+                                    </h2>
+                                    <p class="body-1 text-neutral-7">
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit. Mi gravida.
+                                    </p>
+                                </div>
+                                <div
+                                    class="d-flex justify-content-between align-items-center"
+                                >
+                                    <div class="small-headline text-neutral-6">
+                                        Juni 27, 2022
+                                    </div>
+                                    <div
+                                        class="small-headline text-primary cursor-pointer"
+                                    >
+                                        Read More &#9658;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="quick-search-section" class="py-16">
+                <div class="container d-flex flex-column gap-6">
+                    <div class="">
+                        <h2 class="subheading mb-2">
+                            TOP VIỆC LÀM CHO FRESHER
+                        </h2>
+                        <p class="description-small">
+                            Việc làm Fresher Java / Việc làm Fresher Javascript
+                            / Việc làm Fresher PHP / Việc làm Fresher Python /
+                            Việc làm Fresher ReactJS / Việc làm Fresher NodeJS /
+                            Việc làm Fresher C/C++ / Việc làm Fresher Tester /
+                            Việc làm Fresher Frontend / Việc làm Fresher Backend
+                        </p>
+                    </div>
+                    <div class="">
+                        <h2 class="subheading mb-2">
+                            Việc làm theo ngành nghề
+                        </h2>
+                        <p class="description-small">
+                            Việc làm IT ngành Outsourcing / Việc làm IT ngành
+                            Product / Việc làm IT ngành Ngân hàng / Việc làm IT
+                            ngành Viễn thông / Việc làm IT ngành Game / Giải trí
+                            / Việc làm IT ngành Fintech / Việc làm IT ngành Phần
+                            cứng / Việc làm IT ngành Phần mềm / Việc làm IT
+                            ngành Quảng cáo truyền thông / Việc làm IT ngành
+                            Dịch vụ IT
+                        </p>
+                    </div>
+                    <div class="">
+                        <h2 class="subheading mb-2">
+                            Công ty HOT theo ngành nghề
+                        </h2>
+                        <p class="description-small">
+                            VCông ty Outsourcing / Công ty ngành Phần Mềm / Công
+                            ty ngành Phần cứng / Công ty ngành Product / Công ty
+                            ngành Ngân hàng / Công ty ngành Viễn thông / Công ty
+                            ngành Game / Giải trí / Công ty ngành Quảng Cáo
+                            Truyền Thông / Công ty ngành Dịch vụ IT / Công ty
+                            ngành Fintech
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <footer id="footer-section" class="mb-8 py-8">
+                <div class="container">
+                    <div class="row gx-6">
+                        <div class="col-12 col-md-4">
+                            <a class="mb-4" href="#">
+                                <img
+                                    style="max-width: 200px"
+                                    src="assets/image/header/img_logo.png"
+                                    alt=""
+                                />
+                            </a>
+                            <ul class="mb-4 ps-0">
+                                <li class="mb-3">
+                                    <span class="small-headline"
+                                        >Tầng 12A, Toà nhà AP Tower, 518B Điện
+                                        Biên Phủ, Phường 21, Quận Bình Thạnh,
+                                        Thành phố Hồ Chí Minh</span
+                                    >
+                                </li>
+                                <li class="mb-3">
+                                    <span class="small-headline"
+                                        >Copyright © CÔNG TY CỔ PHẦN
+                                        APPLANCER</span
+                                    >
+                                </li>
+                                <li class="mb-3">
+                                    <span class=""
+                                        >Liên Hệ: 028 6273 3496 -
+                                        contact@topdev.vn</span
+                                    >
+                                </li>
+                                <li class="mb-3">
+                                    <span class=""
+                                        >ĐKKD : 031 303 2338 - Cấp ngày :
+                                        27/11/2014</span
+                                    >
+                                </li>
+                            </ul>
+                            <a href="#">
+                                <img
+                                    src="assets/image/footer/img_validate_brand.png"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+
+                        <div class="col-12 col-md-2">
+                            <h1 class="subheading mb-4">VỀ TOPDEV</h1>
+                            <ul>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Về chúng tôi</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Liên hệ</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Thỏa thuận sử dụng</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Cơ hội việc làm</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Quy định bảo mật</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Quy chế hoạt động của sàn giao dịch
+                                            thương mại điện tử TOPDEV</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Giải quyết khiếu nại</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Ứng dụng di động</span
+                                        >
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <h1 class="subheading mb-4">ỨNG VIÊN</h1>
+                            <ul>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Tìm lương Gross - Net</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Tạo CV</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Tìm kiếm công việc IT</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Trắc nghiệm tính cách</span
+                                        >
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <h1 class="subheading mb-4">NHÀ TUYỂN DỤNG</h1>
+                            <ul>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Đăng việc làm IT</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#">
+                                        <span class="small-headline"
+                                            >Tìm kiếm nhân tài</span
+                                        >
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <h1 class="body-2 mb-2">Theo dõi chúng tôi</h1>
+                            <div class="d-flex gap-3 align-items-center">
+                                <a href="#">
+                                    <i
+                                        class="fa-brands fa-square-facebook fs-8"
+                                    ></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-telegram fs-8"></i>
+                                </a>
+                                <a href="#">
+                                    <i
+                                        class="fa-brands fa-square-twitter fs-8"
+                                    ></i>
+                                </a>
+                            </div>
+                            <div class="d-flex gap-3 align-items-center">
+                                <a href="#">
+                                    <i class="fa-brands fa-linkedin fs-8"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-tiktok fs-8"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram fs-8"></i>
+                                </a>
+                            </div>
+                            <h1 class="body-2 my-2">
+                                TẢI ỨNG DỤNG TOPDEV NGAY
+                            </h1>
+                            <div class="row gx-4">
+                                <div class="col-6 text-center">
+                                    <img
+                                        src="assets/image/footer/img_qr_app.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="col-6">
+                                    <a href="">
+                                        <img
+                                            src="assets/image/footer/img_appstore.png"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <a href="">
+                                        <img
+                                            src="assets/image/footer/img_chplay.png"
+                                            alt=""
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div
+            class="bottom-menu container d-lg-none d-flex justify-content-between align-items-center js-bottom-menu bg-white"
+        >
+            <a class="menu-item js-menu-item active" href="#">
+                <i class="fa-solid fa-home fs-6"></i>
+                <span class="small-headline">Home</span>
+            </a>
+
+            <a class="menu-item js-menu-item" href="#">
+                <i class="fa-solid fa-bookmark fs-6"></i>
+                <span class="small-headline">Save</span>
+            </a>
+
+            <a class="menu-item js-menu-item" href="#">
+                <i class="fa-regular fa-square fs-6"></i>
+                <span class="small-headline">Applied</span>
+            </a>
+
+            <a class="menu-item js-menu-item" href="#">
+                <i class="fa-solid fa-user fs-6"></i>
+                <span class="small-headline">Profile</span>
+            </a>
+        </div>
+
+        <!-- Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="assets/lib/owl-carousel-2/src/js/owl.carousel.js"></script>
+        <script src="assets/lib/owl-carousel-2/src/js/owl.navigation.js"></script>
+        <script type="module" src="assets/js/index.js"></script>
+        <!-- End Script -->
+    </body>
+</html>

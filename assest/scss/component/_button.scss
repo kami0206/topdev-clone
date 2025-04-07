@@ -112,3 +112,23 @@
     
   }
 }
+.form-select {
+  --#{$prefix}input-border-width: #{$border-width};
+  --#{$prefix}input-border-color: #{$dark};
+
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: var(--#{$prefix}body-color);
+  background-color: var(--#{$prefix}body-bg);
+  border: var(--#{$prefix}input-border-width) solid
+      var(--#{$prefix}input-border-color);
+
+  &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+      outline: 0;
+  }
+}

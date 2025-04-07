@@ -1,0 +1,37 @@
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        $neutral-gray1 25%,
+        $neutral-gray2 50%,
+        $neutral-gray1 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 2s infinite;
+    border-radius: 4px;
+}
+
+.skeleton-line {
+    @extend .skeleton;
+    width: 100%;
+
+    &::after {
+        content: '\00a0';
+        visibility: hidden;
+    }
+}
+
+.skeleton-line-2 {
+    @extend .skeleton;
+    width: 100%;
+    height: 3rem;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}

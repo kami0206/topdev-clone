@@ -1,472 +1,653 @@
+
 $utilities: (
-  "opacity": (
-    property: opacity,
-    values: (
-      0: 0,
-      25: 0.25,
-      50: 0.5,
-      75: 0.75,
-      100: 1,
-    ),
-  ),
-  "overflow": (
-    property: overflow,
-    values: auto hidden visible scroll,
-  ),
-  "overflow-x": (
-    property: overflow-x,
-    values: auto hidden visible scroll,
-  ),
-  "overflow-y": (
-    property: overflow-y,
-    values: auto hidden visible scroll,
-  ),
-  "display": (
-    responsive: true,
-    print: true,
-    property: display,
-    class: d,
-    values: inline inline-block block grid inline-grid table table-row
-      table-cell flex inline-flex none,
-  ),
-  "shadow": (
-    property: box-shadow,
-    class: shadow,
-    values: (
-      null: var(--#{$prefix}box-shadow),
-      sm: var(--#{$prefix}box-shadow-sm),
-      lg: var(--#{$prefix}box-shadow-lg),
-      none: none,
-    ),
-  ),
-  // Margin Utilities
-  "margin":
-    (
-      responsive: true,
-      property: margin,
-      class: m,
-      values:
-        map-merge(
-          $spacers,
-          (
-            auto: auto,
-          )
+    'opacity': (
+        property: opacity,
+        values: (
+            0: 0,
+            25: 0.25,
+            50: 0.5,
+            75: 0.75,
+            100: 1,
         ),
     ),
-  "margin-x": (
-    responsive: true,
-    property: margin-right margin-left,
-    class: mx,
-    values:
-      map-merge(
-        $spacers,
+    'overflow': (
+        property: overflow,
+        values: auto hidden visible scroll,
+    ),
+    'overflow-x': (
+        property: overflow-x,
+        values: auto hidden visible scroll,
+    ),
+    'overflow-y': (
+        property: overflow-y,
+        values: auto hidden visible scroll,
+    ),
+    'display': (
+        responsive: true,
+        print: true,
+        property: display,
+        class: d,
+        values: inline inline-block block grid inline-grid table table-row
+            table-cell flex inline-flex none,
+    ),
+    'shadow': (
+        property: box-shadow,
+        class: shadow,
+        values: (
+            null: var(--#{$prefix}box-shadow),
+            sm: var(--#{$prefix}box-shadow-sm),
+            lg: var(--#{$prefix}box-shadow-lg),
+            none: none,
+        ),
+    ),
+    // Position Utilities
+    'position':
         (
-          auto: auto,
-        )
-      ),
-  ),
-  "margin-y": (
-    responsive: true,
-    property: margin-top margin-bottom,
-    class: my,
-    values:
-      map-merge(
-        $spacers,
+            property: position,
+            values: static relative absolute fixed sticky,
+        ),
+    'top': (
+        property: top,
+        values: $position-values,
+    ),
+    'bottom': (
+        property: bottom,
+        values: $position-values,
+    ),
+    'start': (
+        property: left,
+        class: start,
+        values: $position-values,
+    ),
+    'end': (
+        property: right,
+        class: end,
+        values: $position-values,
+    ),
+    'translate-middle': (
+        property: transform,
+        class: translate-middle,
+        values: (
+            null: translate(-50%, -50%),
+            x: translateX(-50%),
+            y: translateY(-50%),
+        ),
+    ),
+    // End Position Utilities
+    // Margin Utilities
+    'margin':
         (
-          auto: auto,
-        )
-      ),
-  ),
-  "margin-top": (
-    responsive: true,
-    property: margin-top,
-    class: mt,
-    values:
-      map-merge(
-        $spacers,
+            responsive: true,
+            property: margin,
+            class: m,
+            values:
+                map-merge(
+                    $spacers,
+                    (
+                        auto: auto,
+                    )
+                ),
+        ),
+    'margin-x': (
+        responsive: true,
+        property: margin-right margin-left,
+        class: mx,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    'margin-y': (
+        responsive: true,
+        property: margin-top margin-bottom,
+        class: my,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    'margin-top': (
+        responsive: true,
+        property: margin-top,
+        class: mt,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    'margin-end': (
+        responsive: true,
+        property: margin-right,
+        class: me,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    'margin-bottom': (
+        responsive: true,
+        property: margin-bottom,
+        class: mb,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    'margin-start': (
+        responsive: true,
+        property: margin-left,
+        class: ms,
+        values:
+            map-merge(
+                $spacers,
+                (
+                    auto: auto,
+                )
+            ),
+    ),
+    // End Margin Utilities
+    // Padding Utilities
+    'padding':
         (
-          auto: auto,
-        )
-      ),
-  ),
-  "margin-end": (
-    responsive: true,
-    property: margin-right,
-    class: me,
-    values:
-      map-merge(
-        $spacers,
+            responsive: true,
+            property: padding,
+            class: p,
+            values: $spacers,
+        ),
+    'padding-x': (
+        responsive: true,
+        property: padding-right padding-left,
+        class: px,
+        values: $spacers,
+    ),
+    'padding-y': (
+        responsive: true,
+        property: padding-top padding-bottom,
+        class: py,
+        values: $spacers,
+    ),
+    'padding-top': (
+        responsive: true,
+        property: padding-top,
+        class: pt,
+        values: $spacers,
+    ),
+    'padding-end': (
+        responsive: true,
+        property: padding-right,
+        class: pe,
+        values: $spacers,
+    ),
+    'padding-bottom': (
+        responsive: true,
+        property: padding-bottom,
+        class: pb,
+        values: $spacers,
+    ),
+    'padding-start': (
+        responsive: true,
+        property: padding-left,
+        class: ps,
+        values: $spacers,
+    ),
+    // End Padding Utilities
+    // Gap Utilities
+    'gap':
         (
-          auto: auto,
-        )
-      ),
-  ),
-  "margin-bottom": (
-    responsive: true,
-    property: margin-bottom,
-    class: mb,
-    values:
-      map-merge(
-        $spacers,
+            responsive: true,
+            property: gap,
+            class: gap,
+            values: $spacers,
+        ),
+    'row-gap': (
+        responsive: true,
+        property: row-gap,
+        class: row-gap,
+        values: $spacers,
+    ),
+    'column-gap': (
+        responsive: true,
+        property: column-gap,
+        class: column-gap,
+        values: $spacers,
+    ),
+    // End Gap Utilities
+    // Fonts Utilities
+    'font-style':
         (
-          auto: auto,
-        )
-      ),
-  ),
-  "margin-start": (
-    responsive: true,
-    property: margin-left,
-    class: ms,
-    values:
-      map-merge(
-        $spacers,
+            property: font-style,
+            class: fst,
+            values: italic normal,
+        ),
+    'font-weight': (
+        property: font-weight,
+        class: fw,
+        values: (
+            lighter: $font-weight-lighter,
+            light: $font-weight-light,
+            normal: $font-weight-normal,
+            medium: $font-weight-medium,
+            semibold: $font-weight-semibold,
+            bold: $font-weight-bold,
+            bolder: $font-weight-bolder,
+        ),
+    ),
+    'line-height': (
+        property: line-height,
+        class: lh,
+        values: (
+            1: 1,
+            sm: $line-height-sm,
+            base: $line-height-base,
+            lg: $line-height-lg,
+        ),
+    ),
+    'text-align': (
+        responsive: true,
+        property: text-align,
+        class: text,
+        values: (
+            start: left,
+            end: right,
+            center: center,
+        ),
+    ),
+    // End Fonts Utilities
+    // Color Utilities
+    'color':
         (
-          auto: auto,
-        )
-      ),
-  ),
-  // End Margin Utilities
-  // Padding Utilities
-  "padding":
-    (
-      responsive: true,
-      property: padding,
-      class: p,
-      values: $spacers,
+            property: color,
+            class: text,
+            local-vars: (
+                'text-opacity': 1,
+            ),
+            values: $colors,
+        ),
+    'text-opacity': (
+        css-var: true,
+        class: text-opacity,
+        values: (
+            25: 0.25,
+            50: 0.5,
+            75: 0.75,
+            100: 1,
+        ),
     ),
-  "padding-x": (
-    responsive: true,
-    property: padding-right padding-left,
-    class: px,
-    values: $spacers,
-  ),
-  "padding-y": (
-    responsive: true,
-    property: padding-top padding-bottom,
-    class: py,
-    values: $spacers,
-  ),
-  "padding-top": (
-    responsive: true,
-    property: padding-top,
-    class: pt,
-    values: $spacers,
-  ),
-  "padding-end": (
-    responsive: true,
-    property: padding-right,
-    class: pe,
-    values: $spacers,
-  ),
-  "padding-bottom": (
-    responsive: true,
-    property: padding-bottom,
-    class: pb,
-    values: $spacers,
-  ),
-  "padding-start": (
-    responsive: true,
-    property: padding-left,
-    class: ps,
-    values: $spacers,
-  ),
-  // End Padding Utilities
-  // Gap Utilities
-  "gap":
-    (
-      responsive: true,
-      property: gap,
-      class: gap,
-      values: $spacers,
+    // End Color Utilities
+    // Bg Color Utilities
+    'background-color':
+        (
+            property: background-color,
+            class: bg,
+            local-vars: (
+                'bg-opacity': 1,
+            ),
+            values: $colors,
+        ),
+    'bg-opacity': (
+        css-var: true,
+        class: bg-opacity,
+        values: (
+            10: 0.1,
+            25: 0.25,
+            50: 0.5,
+            75: 0.75,
+            100: 1,
+        ),
     ),
-  "row-gap": (
-    responsive: true,
-    property: row-gap,
-    class: row-gap,
-    values: $spacers,
-  ),
-  "column-gap": (
-    responsive: true,
-    property: column-gap,
-    class: column-gap,
-    values: $spacers,
-  ),
-  // End Gap Utilities
-  // Fonts Utilities
-  "font-style":
-    (
-      property: font-style,
-      class: fst,
-      values: italic normal,
+    // End Bg Color Utilities
+    // Border Radius
+    'rounded':
+        (
+            property: border-radius,
+            class: rounded,
+            values: (
+                null: var(--#{$prefix}border-radius),
+                0: 0,
+                1: var(--#{$prefix}border-radius-sm),
+                2: var(--#{$prefix}border-radius),
+                3: var(--#{$prefix}border-radius-lg),
+                4: var(--#{$prefix}border-radius-xl),
+                5: var(--#{$prefix}border-radius-xxl),
+                circle: 50%,
+            ),
+        ),
+    'rounded-top': (
+        property: border-top-left-radius border-top-right-radius,
+        class: rounded-top,
+        values: (
+            null: var(--#{$prefix}border-radius),
+            0: 0,
+            1: var(--#{$prefix}border-radius-sm),
+            2: var(--#{$prefix}border-radius),
+            3: var(--#{$prefix}border-radius-lg),
+            4: var(--#{$prefix}border-radius-xl),
+            5: var(--#{$prefix}border-radius-xxl),
+            circle: 50%,
+        ),
     ),
-  "font-weight": (
-    property: font-weight,
-    class: fw,
-    values: (
-      lighter: $font-weight-lighter,
-      light: $font-weight-light,
-      normal: $font-weight-normal,
-      medium: $font-weight-medium,
-      semibold: $font-weight-semibold,
-      bold: $font-weight-bold,
-      bolder: $font-weight-bolder,
+    'rounded-end': (
+        property: border-top-right-radius border-bottom-right-radius,
+        class: rounded-end,
+        values: (
+            null: var(--#{$prefix}border-radius),
+            0: 0,
+            1: var(--#{$prefix}border-radius-sm),
+            2: var(--#{$prefix}border-radius),
+            3: var(--#{$prefix}border-radius-lg),
+            4: var(--#{$prefix}border-radius-xl),
+            5: var(--#{$prefix}border-radius-xxl),
+            circle: 50%,
+        ),
     ),
-  ),
-  "line-height": (
-    property: line-height,
-    class: lh,
-    values: (
-      1: 1,
-      sm: $line-height-sm,
-      base: $line-height-base,
-      lg: $line-height-lg,
+    'rounded-bottom': (
+        property: border-bottom-right-radius border-bottom-left-radius,
+        class: rounded-bottom,
+        values: (
+            null: var(--#{$prefix}border-radius),
+            0: 0,
+            1: var(--#{$prefix}border-radius-sm),
+            2: var(--#{$prefix}border-radius),
+            3: var(--#{$prefix}border-radius-lg),
+            4: var(--#{$prefix}border-radius-xl),
+            5: var(--#{$prefix}border-radius-xxl),
+            circle: 50%,
+        ),
     ),
-  ),
-  "text-align": (
-    responsive: true,
-    property: text-align,
-    class: text,
-    values: (
-      start: left,
-      end: right,
-      center: center,
+    'rounded-start': (
+        property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        values: (
+            null: var(--#{$prefix}border-radius),
+            0: 0,
+            1: var(--#{$prefix}border-radius-sm),
+            2: var(--#{$prefix}border-radius),
+            3: var(--#{$prefix}border-radius-lg),
+            4: var(--#{$prefix}border-radius-xl),
+            5: var(--#{$prefix}border-radius-xxl),
+            circle: 50%,
+        ),
     ),
-  ),
-  // End Fonts Utilities
-  // Color Utilities
-  "color":
-    (
-      property: color,
-      class: text,
-      local-vars: (
-        "text-opacity": 1,
-      ),
-      values: $text-colors,
-    ),
-  "text-opacity": (
-    css-var: true,
-    class: text-opacity,
-    values: (
-      25: 0.25,
-      50: 0.5,
-      75: 0.75,
-      100: 1,
-    ),
-  ),
-  // End Color Utilities
-  // Bg Color Utilities
-  "background-color":
-    (
-      property: background-color,
-      class: bg,
-      local-vars: (
-        "bg-opacity": 1,
-      ),
-      values: $bg-colors,
-    ),
-  "bg-opacity": (
-    css-var: true,
-    class: bg-opacity,
-    values: (
-      10: 0.1,
-      25: 0.25,
-      50: 0.5,
-      75: 0.75,
-      100: 1,
-    ),
-  ),
-  // End Bg Color Utilities
-  // Border Radius
-  "rounded":
-    (
-      property: border-radius,
-      class: rounded,
-      values: (
-        null: var(--#{$prefix}border-radius),
-        0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-      ),
-    ),
-  "rounded-top": (
-    property: border-top-left-radius border-top-right-radius,
-    class: rounded-top,
-    values: (
-      null: var(--#{$prefix}border-radius),
-      0: 0,
-      1: var(--#{$prefix}border-radius-sm),
-      2: var(--#{$prefix}border-radius),
-      3: var(--#{$prefix}border-radius-lg),
-      4: var(--#{$prefix}border-radius-xl),
-      5: var(--#{$prefix}border-radius-xxl),
-      circle: 50%,
-    ),
-  ),
-  "rounded-end": (
-    property: border-top-right-radius border-bottom-right-radius,
-    class: rounded-end,
-    values: (
-      null: var(--#{$prefix}border-radius),
-      0: 0,
-      1: var(--#{$prefix}border-radius-sm),
-      2: var(--#{$prefix}border-radius),
-      3: var(--#{$prefix}border-radius-lg),
-      4: var(--#{$prefix}border-radius-xl),
-      5: var(--#{$prefix}border-radius-xxl),
-      circle: 50%,
-    ),
-  ),
-  "rounded-bottom": (
-    property: border-bottom-right-radius border-bottom-left-radius,
-    class: rounded-bottom,
-    values: (
-      null: var(--#{$prefix}border-radius),
-      0: 0,
-      1: var(--#{$prefix}border-radius-sm),
-      2: var(--#{$prefix}border-radius),
-      3: var(--#{$prefix}border-radius-lg),
-      4: var(--#{$prefix}border-radius-xl),
-      5: var(--#{$prefix}border-radius-xxl),
-      circle: 50%,
-    ),
-  ),
-  "rounded-start": (
-    property: border-bottom-left-radius border-top-left-radius,
-    class: rounded-start,
-    values: (
-      null: var(--#{$prefix}border-radius),
-      0: 0,
-      1: var(--#{$prefix}border-radius-sm),
-      2: var(--#{$prefix}border-radius),
-      3: var(--#{$prefix}border-radius-lg),
-      4: var(--#{$prefix}border-radius-xl),
-      5: var(--#{$prefix}border-radius-xxl),
-      circle: 50%,
-    ),
-  ),
-  // End Border Radius Utilities
-  // Visibility Utilities
-  "visibility":
-    (
-      property: visibility,
-      class: null,
-      values: (
-        visible: visible,
-        invisible: hidden,
-      ),
-    ),
-  // End Visibility Utilities
-  // Z-index Utilities
-  "z-index":
-    (
-      property: z-index,
-      class: z,
-      values: $zindex-levels,
-    ),
+    // End Border Radius Utilities
+    // Visibility Utilities
+    'visibility':
+        (
+            property: visibility,
+            class: null,
+            values: (
+                visible: visible,
+                invisible: hidden,
+            ),
+        ),
+    // End Visibility Utilities
+    // Z-index Utilities
+    'z-index':
+        (
+            property: z-index,
+            class: z,
+            values: $zindex-levels,
+        ),
     // End Z-index Utilities,
-  "flex":
-    (
-      responsive: true,
-      property: flex,
-      values: (
-        fill: 1 1 auto,
-      ),
+    // Sizing Utilities
+    'width':
+        (
+            property: width,
+            class: w,
+            values: (
+                25: 25%,
+                50: 50%,
+                75: 75%,
+                100: 100%,
+                auto: auto,
+            ),
+        ),
+    'max-width': (
+        property: max-width,
+        class: mw,
+        values: (
+            100: 100%,
+        ),
     ),
-  "flex-direction": (
-    responsive: true,
-    property: flex-direction,
-    class: flex,
-    values: row column row-reverse column-reverse,
-  ),
-  "flex-grow": (
-    responsive: true,
-    property: flex-grow,
-    class: flex,
-    values: (
-      grow-0: 0,
-      grow-1: 1,
+    'viewport-width': (
+        property: width,
+        class: vw,
+        values: (
+            100: 100vw,
+        ),
     ),
-  ),
-  "flex-shrink": (
-    responsive: true,
-    property: flex-shrink,
-    class: flex,
-    values: (
-      shrink-0: 0,
-      shrink-1: 1,
+    'min-viewport-width': (
+        property: min-width,
+        class: min-vw,
+        values: (
+            100: 100vw,
+        ),
     ),
-  ),
-  "flex-wrap": (
-    responsive: true,
-    property: flex-wrap,
-    class: flex,
-    values: wrap nowrap wrap-reverse,
-  ),
-  "justify-content": (
-    responsive: true,
-    property: justify-content,
-    values: (
-      start: flex-start,
-      end: flex-end,
-      center: center,
-      between: space-between,
-      around: space-around,
-      evenly: space-evenly,
+    'height': (
+        property: height,
+        class: h,
+        values: (
+            25: 25%,
+            50: 50%,
+            75: 75%,
+            100: 100%,
+            auto: auto,
+        ),
     ),
-  ),
-  "align-items": (
-    responsive: true,
-    property: align-items,
-    values: (
-      start: flex-start,
-      end: flex-end,
-      center: center,
-      baseline: baseline,
-      stretch: stretch,
+    'max-height': (
+        property: max-height,
+        class: mh,
+        values: (
+            100: 100%,
+        ),
     ),
-  ),
-  "align-content": (
-    responsive: true,
-    property: align-content,
-    values: (
-      start: flex-start,
-      end: flex-end,
-      center: center,
-      between: space-between,
-      around: space-around,
-      stretch: stretch,
+    'viewport-height': (
+        property: height,
+        class: vh,
+        values: (
+            100: 100vh,
+        ),
     ),
-  ),
-  "align-self": (
-    responsive: true,
-    property: align-self,
-    values: (
-      auto: auto,
-      start: flex-start,
-      end: flex-end,
-      center: center,
-      baseline: baseline,
-      stretch: stretch,
+    'min-viewport-height': (
+        property: min-height,
+        class: min-vh,
+        values: (
+            100: 100vh,
+        ),
     ),
-  ),
-  // Text Utilities
-  "fs":
-    (
-      responsive: true,
-      property: font-size,
-      class: fs,
-      values: $spacers,
+    // End Sizing Utilities
+    // Flex Utilities
+    'flex':
+        (
+            responsive: true,
+            property: flex,
+            values: (
+                fill: 1 1 auto,
+            ),
+        ),
+    'flex-direction': (
+        responsive: true,
+        property: flex-direction,
+        class: flex,
+        values: row column row-reverse column-reverse,
     ),
-  // End Text Utilities
-  "size":
-    (
-      responsive: true,
-      property: width height,
-      class: size,
-      values: $spacers,
+    'flex-grow': (
+        responsive: true,
+        property: flex-grow,
+        class: flex,
+        values: (
+            grow-0: 0,
+            grow-1: 1,
+        ),
+    ),
+    'flex-shrink': (
+        responsive: true,
+        property: flex-shrink,
+        class: flex,
+        values: (
+            shrink-0: 0,
+            shrink-1: 1,
+        ),
+    ),
+    'flex-wrap': (
+        responsive: true,
+        property: flex-wrap,
+        class: flex,
+        values: wrap nowrap wrap-reverse,
+    ),
+    'justify-content': (
+        responsive: true,
+        property: justify-content,
+        values: (
+            start: flex-start,
+            end: flex-end,
+            center: center,
+            between: space-between,
+            around: space-around,
+            evenly: space-evenly,
+        ),
+    ),
+    'align-items': (
+        responsive: true,
+        property: align-items,
+        values: (
+            start: flex-start,
+            end: flex-end,
+            center: center,
+            baseline: baseline,
+            stretch: stretch,
+        ),
+    ),
+    'align-content': (
+        responsive: true,
+        property: align-content,
+        values: (
+            start: flex-start,
+            end: flex-end,
+            center: center,
+            between: space-between,
+            around: space-around,
+            stretch: stretch,
+        ),
+    ),
+    'align-self': (
+        responsive: true,
+        property: align-self,
+        values: (
+            auto: auto,
+            start: flex-start,
+            end: flex-end,
+            center: center,
+            baseline: baseline,
+            stretch: stretch,
+        ),
+    ),
+    'order': (
+        responsive: true,
+        property: order,
+        values: (
+            first: -1,
+            0: 0,
+            1: 1,
+            2: 2,
+            3: 3,
+            4: 4,
+            5: 5,
+            last: 6,
+        ),
+    ),
+    // End Flex Utilities
+    // Text Utilities
+    'fs':
+        (
+            responsive: true,
+            property: font-size,
+            class: fs,
+            values: $spacers,
+        ),
+    'white-space': (
+        property: white-space,
+        class: text,
+        values: (
+            wrap: normal,
+            nowrap: nowrap,
+        ),
+    ),
+    // End Text Utilities
+    'size':
+        (
+            responsive: true,
+            property: width height,
+            class: size,
+            values: $spacers,
+        ),
+    'border': (
+        property: border,
+        values: (
+            null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+                var(--#{$prefix}border-color),
+            0: 0,
+        ),
+    ),
+    'border-top': (
+        property: border-top,
+        values: (
+            null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+                var(--#{$prefix}border-color),
+            0: 0,
+        ),
+    ),
+    'border-end': (
+        property: border-right,
+        class: border-end,
+        values: (
+            null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+                var(--#{$prefix}border-color),
+            0: 0,
+        ),
+    ),
+    'border-bottom': (
+        property: border-bottom,
+        values: (
+            null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+                var(--#{$prefix}border-color),
+            0: 0,
+        ),
+    ),
+    'border-start': (
+        property: border-left,
+        class: border-start,
+        values: (
+            null: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
+                var(--#{$prefix}border-color),
+            0: 0,
+        ),
+    ),
+    'border-width': (
+        property: border-width,
+        class: border,
+        values: $border-widths,
+    ),
+    'border-color': (
+        property: border-color,
+        class: border,
+        local-vars: (
+            'border-opacity': 1,
+        ),
+        values: $colors,
     ),
 );

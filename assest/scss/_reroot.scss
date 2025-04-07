@@ -12,14 +12,15 @@ body {
     line-height: var(--#{$prefix}body-line-height);
     color: var(--#{$prefix}body-color);
     text-align: var(--#{$prefix}body-text-align);
-    color: var(--#{$prefix}body-color);
     background-color: var(--#{$prefix}body-bg);
     -webkit-text-size-adjust: 100%;
 }
+
 %heading {
     line-height: $headings-line-height;
     letter-spacing: 0;
     color: var(--#{$prefix}heading-color);
+    margin: 0;
 }
 
 h1 {
@@ -58,9 +59,14 @@ ul {
     list-style: none;
     margin-top: 0;
     margin-bottom: 1rem;
-    padding-left: 2rem;
+    padding-left: 0;
 }
+
 a {
     text-decoration: none;
     color: #{$black};
+}
+
+p {
+    margin: 0;
 }

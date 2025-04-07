@@ -1,3 +1,10 @@
+// Format: Property - Breakpoint - Values
+
+// Responsive - có responsive hay không
+// Property - thuộc tính
+// Class - tên lớp
+// Values - giá trị
+
 @mixin generate-utility($utility, $infix: '', $is-rfs-media-query: false) {
     // Lấy giá trị
     $values: map-get($utility, values);
@@ -111,6 +118,10 @@
                         }
                     }
                 }
+            }
+
+            @if $is-rtl == false {
+                /* rtl:end:remove */
             }
         }
     }

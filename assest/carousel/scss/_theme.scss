@@ -1,7 +1,7 @@
 
 .owl-theme {
-	// Styling Next and Prev buttons
 	.owl-nav {
+		
 		margin-top: 10px;
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
@@ -40,7 +40,7 @@
 		.owl-dot {
 			display: inline-block;
 			zoom: 1;
-			*display: inline;
+			display: inline;
 
 			span {
 				width: $owl-dot-width;

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assest/scss/style.css" />
+    <link rel="stylesheet" href="assest/carousel/scss/owl.carousel.css" />
+    <link rel="stylesheet" href="assest/carousel/scss/owl.theme.default.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar bg-white position-sticky pb-4 top-0">
+      <div class="bg-dark w-100">
+        <div
+          class="d-none d-xl-flex container justify-content-between px-4 py-2"
+        >
+          <div class="d-flex flex-center">
+            <a
+              href=""
+              class="btn botton-label border text-white text-decoration-none px-4 py-2"
+              >Việc làm IT</a
+            >
+            <a
+              href=""
+              class="btn botton-label border text-white text-decoration-none px-4 py-2"
+              >Tạo CV</a
+            >
+            <a
+              href=""
+              class="btn botton-label border text-white text-decoration-none px-4 py-2"
+              >Công ty IT</a
+            >
+            <a
+              href=""
+              class="btn botton-label border text-white text-decoration-none px-4 py-2"
+              >Trắc nghiệm tính cách</a
+            >
+            <a
+              href=""
+              class="btn botton-label border text-white text-decoration-none px-4 py-2"
+              >Blog</a
+            >
+            <a
+              href=""
+              class="btn botton-label border text-white text-decoration-none px-4 py-2"
+              >Việc làm IT <span class="gradient-text">Fresher</span></a
+            >
+          </div>
+          <div
+            class="d-flex justify-content-center align-items-center gap-2 gap-xxl-8"
+          >
+            <a
+              href=""
+              class="body-2 text-decoration-none text-white d-flex items-center"
+            >
+              <img
+                src="assest/img/header/logo/img_icon_phone.png"
+                class="me-2"
+                alt=""
+              />
+              028.6273.3496
+            </a>
+            <a
+              href=""
+              class="body-2 text-decoration-none text-white d-flex items-center"
+            >
+              <img
+                src="assest/img/header/logo/img_icon_person.png"
+                class="me-2"
+                alt=""
+              />
+              Đăng Tuyển
+            </a>
+            <a
+              href=""
+              class="body-2 text-decoration-none text-white d-flex items-center"
+            >
+              <img
+                src="assest/img/header/logo/img_icon_mail.png"
+                class="me-2"
+                alt=""
+              />
+              Liên Hệ
+            </a>
+            <img src="assest/img/header/img_united_kingdom.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="container d-flex justify-content-between px-4 py-5">
+        <div class="logo">
+          <img
+            src="assest/img/header/img_logo.png"
+            alt="TOPDev Logo"
+            style="max-width: 210px; max-height: 40px"
+          />
+        </div>
+        <div class="nav-right d-flex align-items-center">
+          <div class="notification position-relative me-3">
+            <img
+              width="25"
+              height="28"
+              src="assest/img/spotlight-section/icon/img_icon_bell.png"
+              alt="Thông báo"
+            />
+            <span class="badge extra-small">99+</span>
+          </div>
+          <div id="loginButton" class="js-login-btn me-2">
+            <button class="btn btn-primary" onclick="showLogin()">
+              Đăng nhập
+            </button>
+          </div>
+          <div
+            id="profileDropdown"
+            class="dropdown dropdown-left js-dropdown-profile px-2 py-1"
+            style="display: none"
+          >
+            <div
+              class="dropdown-toggle gap-4 js-dropdown-toggle"
+              onclick="toggleDropdown()"
+            >
+              <div class="rounded-full size-10">
+                <img src="" class="js-profile-avatar h-100" alt="Avatar" />
+              </div>
+              <div class="text-start">
+                <p class="small-headline js-profile-name"></p>
+                <p class="botton-label">UI UX</p>
+              </div>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul class="dropdown-menu js-dropdown-menu">
+              <li class="dropdown-item js-dropdown-item">
+                <div class="nav-link js-btn-logout" onclick="logout()">
+                  Logout
+                </div>
+              </li>
+              <li class="dropdown-item js-dropdown-item">
+                <a href="#" class="nav-link">Option 2</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section my-10">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-10 col-md-6 col-xl-5">
+            <img
+              src="assest/img/hero-section/img_banner.png"
+              alt="banner"
+              class="banner"
+            />
+          </div>
+        </div>
+        <div class="py-10">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+              <div
+                class="gap-2 d-md-flex flex-column flex-md-row align-items-center justify-content-center"
+              >
+                <div class="search-input flex-fill mb-4 position-relative">
+                  <input
+                    type="text"
+                    id="js-job-search-input"
+                    class="form-control"
+                    placeholder="Công việc bạn đang tìm ?"
+                  />
+                  <img
+                    src="assest/img/spotlight-section/icon/img_icon_search.png"
+                    alt="search"
+                    class="search-icon js-job-search-icon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-xxl-2 text-center">
+              <div class="position-relative w-100 mb-4">
+                <i
+                  class="fa-solid fa-location-dot position-absolute start-0 top-50 ps-2 translate-middle-y"
+                ></i>
+                <select
+                  class="form-select px-6 py-3 bg-neutral-1 rounded-2 js-form-select-location"
+                  id="js-select-location"
+                >
+                  <option selected value="all">Vị trí</option>
+                  <option value="ha-noi">Hà Nội</option>
+                  <option value="ho-chi-minh">Hồ Chí Minh</option>
+                  <option value="da-nang">Đà Nẵng</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-xxl-2 text-center">
+              <button
+                id="js-btn-search"
+                class="btn btn-dark py-3 border-0 w-100 mb-4"
+              >
+                <span class="button-label text-nowrap">Tìm kiếm</span>
+                <div id="loading" class="d-none">Đang tải...</div>
+              </button>
+            </div>
+          </div>
+          <div
+            class="d-flex gap-2 align-items-center justify-content-center mb-4"
+          >
+            <div class="btn small-headline btn-outline-gar">New Job</div>
+            <div class="btn small-headline btn-outline-gar">Part Time</div>
+            <div class="btn small-headline btn-outline-gar">Full Time</div>
+            <div class="btn small-headline btn-outline-gar">Work from home</div>
+          </div>
+          <div id="js-search-jobs-result" class="container d-none">
+            <h1 class="heading-1 mb-8 text-gradient">Kết quả tìm kiếm</h1>
+            <div
+              class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4"
+              id="js-search-result-list"
+            >
+              <!-- Job results will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="spotline-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-2 ms-2">
+            <h2 class="heading-2 mb-4">Danh Mục</h2>
+            <div class="row">
+              <div class="col-6 col-xl-11">
+                <button
+                  class="btn btn-neutral-gray-1 p-2 w-100 text-start mb-1 small-headline"
+                >
+                  Việc làm IT
+                </button>
+              </div>
+              <div class="col-6 col-xl-11">
+                <button
+                  class="btn btn-neutral-gray-1 p-2 w-100 text-start mb-1 small-headline"
+                >
+                  Tạo CV
+                </button>
+              </div>
+              <div class="col-6 col-xl-11">
+                <button
+                  class="btn btn-neutral-gray-1 p-2 w-100 text-start mb-1 small-headline"
+                >
+                  Công Ty IT
+                </button>
+              </div>
+              <div class="col-6 col-xl-11">
+                <button
+                  class="btn btn-neutral-gray-1 p-2 w-100 text-start mb-1 small-headline"
+                >
+                  Trắc nghiệm tính cách
+                </button>
+              </div>
+              <div class="col-6 col-xl-11">
+                <button
+                  class="btn btn-neutral-gray-1 p-2 w-100 text-start mb-1 small-headline"
+                >
+                  Blog
+                </button>
+              </div>
+              <div class="col-6 col-xl-11">
+                <button
+                  class="btn btn-neutral-gray-1 p-2 w-100 text-start mb-1 small-headline"
+                >
+                  Việc làm IT <span class="text-primary">Fresher</span>
+                </button>
+              </div>
+              <div class="col-6 col-xl-11">
+                <button
+                  class="btn btn-white p-2 w-100 text-lg-start text-start mb-2 small-headline"
+                >
+                  Xem thêm
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6 mb-8 mx-xl-10">
+            <h2 class="heading-2 mb-4">Công ty nổi bật</h2>
+            <div
+              class="slider mb-4 d-flex js-owl-carousel-brand owl-carousel owl-theme owl-loaded"
+            >
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_acb.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_applancer.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_chotot.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_daoukiwoom.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_ivc.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_ntndata.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_talentsuccess.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_tdtasia.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="brand-item px-2 py-1 rounded-4 d-flex align-items-center"
+              >
+                <img
+                  src="assest/img/spotlight-section/logo/img_logo_viettel.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="p-2">
+              <div class="row">
+                <div class="col-12 col-xl-8">
+                  <div class="w-100">
+                    <img
+                      width="100%"
+                      src="assest/img/spotlight-section/thumb-job/img_thumb_mgm_job.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-xl-4 d-flex flex-column justify-content-between"
+                >
+                  <div>
+                    <h1 class="heading-1 text-primary my-1">
+                      mgm technology partners Vietnam
+                    </h1>
+                    <h2 class="heading-2 text-primary mb-4">Up to 5000$</h2>
+                    <p class="description text-neutral-gray-6">
+                      Đà Nẵng, Hồ Chí Minh
+                    </p>
+                  </div>
+                  <div class="text-end">
+                    <span class="text-primary heading-2">8 Job</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-3 ms-5">
+            <h2 class="heading-2 ms-2">Đề xuất cho bạn</h2>
+            <div class="js-owl-carousel-card-job-dots owl-carousel owl-theme">
+              <div class="card card-job">
+                <div class="card-header gap-4">
+                  <div class="card-logo">
+                    <img
+                      src="/assest/img/spotlight-section/logo/img_logo_chotot.png"
+                      alt="Logo"
+                    />
+                  </div>
+                  <div class="card-title">
+                    <h2 class="display-2">Product Manager</h2>
+                    <p class="text-primary extra-small">Up to 500$</p>
+                  </div>
+                  <i class="fa-solid fa-bookmark fs-4"></i>
+                </div>
+                <div class="divider-line m-0"></div>
+                <div class="card-body gap-2">
+                  <div class="d-flex gap-4 text-neutral-7">
+                    <span
+                      ><i class="fa-solid fa-laptop-file fs-4"></i> Remote</span
+                    >
+                    <span
+                      ><i class="fa-regular fa-clock fs-4"></i> Full Time</span
+                    >
+                  </div>
+                  <p class="card-body-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Laboriosam impedit expedita reprehenderit non cupiditate
+                    totam similique sit molestias officia repellat quasi amet
+                    iure, eum velit. Impedit veniam amet ex cumque?
+                  </p>
+                </div>
+              </div>
+              <div class="card card-job">
+                <div class="card-header gap-4">
+                  <div class="card-logo">
+                    <img
+                      src="/assest/img/spotlight-section/logo/img_logo_chotot.png"
+                      alt="Logo"
+                    />
+                  </div>
+                  <div class="card-title">
+                    <h2 class="display-2">Product Manager</h2>
+                    <p class="text-primary extra-small">Up to 500$</p>
+                  </div>
+                  <i class="fa-solid fa-bookmark fs-4"></i>
+                </div>
+                <div class="divider-line m-0"></div>
+                <div class="card-body gap-2">
+                  <div class="d-flex gap-4 text-neutral-7">
+                    <span
+                      ><i class="fa-solid fa-laptop-file fs-4"></i> Remote</span
+                    >
+                    <span
+                      ><i class="fa-regular fa-clock fs-4"></i> Full Time</span
+                    >
+                  </div>
+                  <p class="card-body-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Laboriosam impedit expedita reprehenderit non cupiditate
+                    totam similique sit molestias officia repellat quasi amet
+                    iure, eum velit. Impedit veniam amet ex cumque?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advertise-section pb-8 pt-10">
+      <div class="container">
+        <h1 class="heading-1 text-gradient mb-8">Nhà tuyển dụng hàng đầu</h1>
+        <div
+          class="owl-carousel-featured-companies js-owl-carousel-featured-companies owl-carousel owl-theme"
+        >
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_acb.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_applancer.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_chotot.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_daoukiwoom.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_ivc.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_ntndata.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_talentsuccess.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_tdtasia.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-item px-2 py-1 rounded-4 d-flex align-items-center">
+            <img
+              src="assest/img/spotlight-section/logo/img_logo_viettel.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="job-today-section">
+      <div class="container py-8">
+        <div class="text-center mb-10">
+          <h1 class="heading-1 text-gradient">Công Việc Hot Hôm Nay</h1>
+        </div>
+        <div
+          class="js-owl-carousel-hot-job owl-carousel-with-side-nav owl-carousel owl-theme"
+        ></div>
+      </div>
+    </section>
+
+    <section id="featured-suggestions-section" class="mb-16">
+      <div class="container">
+        <h1 class="heading-1 mb-4">
+          Gợi ý <span class="text-primary">nổi bật</span>
+        </h1>
+        <div
+          class="js-owl-carousel-tabs owl-carousel owl-theme tabs-nav gap-3 mb-4"
+          id="featured-job-list-navs"
+        >
+          <button
+            class="btn btn-neutral-gray-1 px-4 py-2 me-2 active"
+            onclick="getJobs('all', this)"
+          >
+            <span class="botton-label">Tất cả</span>
+          </button>
+          <button
+            class="btn btn-neutral-gray-1 px-4 py-2 me-2"
+            onclick="getJobs('ha-noi', this)"
+          >
+            <span class="botton-label">Hà Nội</span>
+          </button>
+          <button
+            class="btn btn-neutral-gray-1 px-4 py-2 me-2"
+            onclick="getJobs('ho-chi-minh', this)"
+          >
+            <span class="botton-label">Hồ Chí Minh</span>
+          </button>
+          <button
+            class="btn btn-neutral-gray-1 px-4 py-2 me-2"
+            onclick="getJobs('da-nang', this)"
+          >
+            <span class="botton-label">Đà Nẵng</span>
+          </button>
+        </div>
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4"
+          id="featured-job-list"
+        ></div>
+      </div>
+    </section>
+
+    <section class="blog-section">
+      <div class="container">
+        <h1 class="heading-1 mb-8">Blog</h1>
+        <div
+          class="js-owl-carousel-blog owl-carousel-with-dots-nav js-owl-carousel-with-dots-nav owl-carousel owl-theme"
+        ></div>
+      </div>
+    </section>
+
+    <section class="about-section pt-10 pb-8">
+      <div class="container px-4 mt-5">
+        <div class="d-flex flex-column flex-md-column-reverse">
+          <div class="row gx-0 gx-md-2 gx-lg-3 gx-xl-4 gx-xxl-6">
+            <div class="col-12 col-md-4">
+              <img
+                src="assest/img/header/img_logo.png"
+                width="202"
+                height="38"
+                alt="top dev logo"
+              />
+              <div class="small-headline mt-4">
+                Tầng 12A, Toà nhà AP Tower, 518B Điện Biên Phủ, Phường 21, Quận
+                Bình Thạnh, Thành phố Hồ Chí Minh
+              </div>
+              <div class="small-headline mt-4">
+                Copyright © CÔNG TY CỔ PHẦN APPLANCER
+              </div>
+              <div class="small-headline mt-4">
+                Liên Hệ: 028 6273 3496 - contact@topdev.vn
+              </div>
+              <div class="small-headline mt-4">
+                ĐKKD : 031 303 2338 - Cấp ngày : 27/11/2014
+              </div>
+              <img
+                width="114"
+                height="43"
+                src="assest/img/footer/img_validate_brand.png"
+                alt=""
+                class="mt-4"
+              />
+            </div>
+            <div class="col-12 col-md-2">
+              <h1 class="subheading mb-4">VỀ TOPDEV</h1>
+              <ul>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline">Về chúng tôi</span></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"><span class="small-headline">Liên hệ</span></a>
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline">Thỏa thuận sử dụng</span></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline">Cơ hội việc làm</span></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline">Quy định bảo mật</span></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline"
+                      >Quy chế hoạt động của sàn giao dịch thương mại điện tử
+                      TOPDEV</span
+                    ></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline">Giải quyết khiếu nại</span></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline">Ứng dụng di động</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-2">
+              <h1 class="subheading mb-4">ỨNG VIÊN</h1>
+              <ul>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline"
+                      >Tìm lương Gross - Net</span
+                    ></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"><span class="small-headline">Tạo CV</span></a>
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline"
+                      >Tìm kiếm công việc IT</span
+                    ></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline"
+                      >Trắc nghiệm tính cách</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-2">
+              <h1 class="subheading mb-4">NHÀ TUYỂN DỤNG</h1>
+              <ul>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline">Đăng việc làm IT</span></a
+                  >
+                </li>
+                <li class="mb-3">
+                  <a href="#"
+                    ><span class="small-headline">Tìm kiếm nhân tài</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-2 mt-6 mt-md-0">
+              <div class="d-flex items-center items-md-start flex-column">
+                <div class="body-2 mb-3">Theo dõi chúng tôi tại</div>
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex gap-3">
+                    <a class="text-decoration-none" href="#"
+                      ><img
+                        width="32"
+                        height="32"
+                        src="assest/img/footer/logo/img_logo_facebook.png"
+                        alt=""
+                    /></a>
+                    <a class="text-decoration-none" href="#"
+                      ><img
+                        width="32"
+                        height="32"
+                        src="assest/img/footer/logo/img_logo_telegram.png"
+                        alt=""
+                    /></a>
+                    <a class="text-decoration-none" href="#"
+                      ><img
+                        width="32"
+                        height="32"
+                        src="assest/img/footer/logo/img_logo_twitter.png"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="d-flex gap-3">
+                    <a class="text-decoration-none" href="#"
+                      ><img
+                        width="32"
+                        height="32"
+                        src="assest/img/footer/logo/img_logo_linkin.png"
+                        alt=""
+                    /></a>
+                    <a class="text-decoration-none" href="#"
+                      ><img
+                        width="32"
+                        height="32"
+                        src="assest/img/footer/logo/img_logo_tiktok.png"
+                        alt=""
+                    /></a>
+                    <a class="text-decoration-none" href="#"
+                      ><img
+                        width="32"
+                        height="32"
+                        src="assest/img/footer/logo/img_logo_insta.png"
+                        alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="body-2 mt-3">TẢI ỨNG DỤNG TOPDEV NGAY</div>
+                <div class="mt-3 row row-cols-2 gx-4">
+                  <div class="col">
+                    <img
+                      class="d-block"
+                      src="assest/img/footer/img_qr_app.png"
+                      width="100%"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col">
+                    <div
+                      class="h-100 d-flex flex-column justify-content-between"
+                    >
+                      <img
+                        src="assest/img/footer/img_appstore.png"
+                        width="100%"
+                        alt=""
+                      />
+                      <img
+                        src="assest/img/footer/img_chplay.png"
+                        width="100%"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="py-4 py-md-6 py-xl-8 py-xxl-10"></div>
+          <div class="py-4 py-md-6 py-xl-8 py-xxl-10"></div>
+          <div class="row">
+            <div class="col-12 mb-6">
+              <h4 class="sub-heading mb-2">TOP VIỆC LÀM CHO FRESHER</h4>
+              <p class="description-small">
+                Việc làm Fresher Java / Việc làm Fresher Javascript / Việc làm
+                Fresher PHP / Việc làm Fresher Python / Việc làm Fresher ReactJS
+                / Việc làm Fresher NodeJS / Việc làm Fresher C/C++ / Việc làm
+                Fresher Tester / Việc làm Fresher Frontend / Việc làm Fresher
+                Backend
+              </p>
+            </div>
+            <div class="col-12 mb-6">
+              <h4 class="sub-heading mb-2">VIỆC LÀM THEO NGHÀNH NGHỀ</h4>
+              <p class="description-small">
+                Việc làm IT ngành Outsourcing / Việc làm IT ngành Product / Việc
+                làm IT ngành Ngân hàng / Việc làm IT ngành Viễn thông / Việc làm
+                IT ngành Game / Giải trí / Việc làm IT ngành Fintech / Việc làm
+                IT ngành Phần cứng / Việc làm IT ngành Phần mềm / Việc làm IT
+                ngành Quảng cáo truyền thông / Việc làm IT ngành Dịch vụ IT
+              </p>
+            </div>
+            <div class="col-12">
+              <h4 class="sub-heading mb-2">CÔNG TY HOT THEO NGHÀNH NGHỀ</h4>
+              <p class="description-small">
+                Công ty Outsourcing / Công ty ngành Phần Mềm / Công ty ngành
+                Phần cứng / Công ty ngành Product / Công ty ngành Ngân hàng /
+                Công ty ngành Viễn thông / Công ty ngành Game / Giải trí / Công
+                ty ngành Quảng Cáo Truyền Thông / Công ty ngành Dịch vụ IT /
+                Công ty ngành Fintech
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mobile-nav position-fixed w-100 bg-white d-md-none">
+      <div class="row row-cols-4">
+        <div class="col">
+          <a
+            href="#"
+            class="nav-item pb-5 pt-4 d-flex flex-column justify-content-between align-items-center text-decoration-none"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 22 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- SVG content -->
+            </svg>
+            <span class="small-headline mt-1">Home</span>
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="#"
+            class="nav-item pb-5 pt-4 d-flex flex-column justify-content-between align-items-center text-decoration-none"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- SVG content -->
+            </svg>
+            <span class="small-headline mt-1">Save</span>
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="#"
+            class="nav-item pb-5 pt-4 d-flex flex-column justify-content-between align-items-center text-decoration-none"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- SVG content -->
+            </svg>
+            <span class="small-headline mt-1">Applied</span>
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="#"
+            class="nav-item pb-5 pt-4 d-flex flex-column justify-content-between align-items-center text-decoration-none"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- SVG content -->
+            </svg>
+            <span class="small-headline mt-1">Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeLoginModal()">×</span>
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+          <label for="email">Email</label>
+          <input type="text" id="email" required />
+          <label for="password">Mật khẩu</label>
+          <input type="password" id="password" required />
+          <button class="btn btn-primary-0 text-white" type="submit">
+            Đăng nhập
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assest/carousel/js/owl.carousel.js"></script>
+    <script src="assest/carousel/js/owl.navigation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="module" src="assest/js/index.js"></script>
+  </body>
+</html>

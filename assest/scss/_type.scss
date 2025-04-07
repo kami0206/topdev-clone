@@ -155,6 +155,12 @@ $typography-bodies: (
         sp: 0px,
         fw: $font-weight-medium,
     ),
+    description-small: (
+        fs: 10px,
+        lh: 1.35,
+        sp: 0px,
+        fw: $font-weight-normal,
+    ),
 );
 
 $typography-displays: (
@@ -196,5 +202,24 @@ $typographies: map.merge(
 @each $name, $config in $typographies {
     .#{$name} {
         @include typography($config);
+    }
+}
+
+$lines: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+);
+
+@each $name, $value in $lines {
+    .ellipsis-#{$name} {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: #{$value};
+        line-clamp: #{$value};
+        -webkit-box-orient: vertical;
     }
 }

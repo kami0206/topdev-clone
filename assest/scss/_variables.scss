@@ -124,6 +124,12 @@ $font-regular: "Roboto-Regular", sans-serif;
 $font-bold: "Roboto-Bold", sans-serif;
 $font-medium: "Roboto-Medium", sans-serif;
 
+
+$position-values: (
+    0: 0,
+    50: 50%,
+    100: 100%,
+) !default;
 //spacing 
 $spacer: 4px;
 $spacers: (
@@ -194,6 +200,16 @@ $border-radius-xxl: 2rem;
 $border-radius-pill: 50rem;
 // End Border
 //zindex
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-offcanvas-backdrop: 1040;
+$zindex-offcanvas: 1045;
+$zindex-modal-backdrop: 1050;
+$zindex-modal: 1055;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;
+$zindex-toast: 1090;
 $zindex-levels: (
     n1: -1,
     0: 0,
@@ -289,3 +305,18 @@ $card-box-shadow: 0 0.125rem 0.25rem rgba($black, 0.15);
 $card-border-radius: $border-radius;
 $card-border-width: 0;
 $card-border-color: transparent;
+$card-border-style: solid;
+
+//nav 
+$nav-padding-x: 1rem;
+$nav-padding-y: 1rem;
+$nav-bg:$white;
+
+$modal-bg-color: rgba(0, 0, 0, 0.5);
+$modal-content-bg: #fff;
+$modal-padding: 2rem;
+$modal-radius: 0.75rem;
+$modal-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+$transition-time: 0.3s;
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;

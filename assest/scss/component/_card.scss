@@ -1,20 +1,22 @@
-.card{
+
+.card {
     --#{$prefix}card-color: #{$card-color};
     --#{$prefix}card-bg: #{$card-bg};
     --#{$prefix}card-box-shadow: #{$card-box-shadow};
     --#{$prefix}card-border-radius: #{$card-border-radius};
     --#{$prefix}card-border-width: #{$card-border-width};
     --#{$prefix}card-border-color: #{$card-border-color};
-    --#{$prefix}card-transition: all 0.2s ease-in-out;
+    --#{$prefix}card-border-style: #{$card-border-style};
+    --#{$prefix}card-transition: all 0.3s ease-in-out;
     --#{$prefix}card-padding-x: 0;
     --#{$prefix}card-padding-y: 0;
 
     color: var(--#{$prefix}card-color);
-    background-color: var( --#{$prefix}card-bg );
+    background-color: var(--#{$prefix}card-bg);
     box-shadow: var(--#{$prefix}card-box-shadow);
     border-radius: var(--#{$prefix}card-border-radius);
     border: var(--#{$prefix}card-border-width)
-         var(--#{$prefix}card-border-color);
+        var(--#{$prefix}card-border-style) var(--#{$prefix}card-border-color);
     transition: var(--#{$prefix}card-transition);
     padding: var(--#{$prefix}card-padding-y) var(--#{$prefix}card-padding-x);
     width: 100%;
@@ -27,19 +29,62 @@
     }
 }
 
-// Utility Card
-.card-title {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    text-align: start;
+// Job Card
+.card-job {
+    // max-width: 20rem;
+    width: 20rem;
+    --#{$prefix}card-padding-x: 1rem;
+    --#{$prefix}card-padding-y: 1rem;
+    margin: 0 auto 0.5rem;
+    padding: var(--#{$prefix}card-padding-y) var(--#{$prefix}card-padding-x);
 }
+// End Job Card
+
+// Blog Card
+.card-blog {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+
+    .card-badge {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background-color: $neutral-gray4;
+        padding: 0.5rem 1rem;
+        border-radius: $border-radius-xxl;
+        opacity: 0.7;
+        z-index: 1;
+    }
+
+    .card-img-top {
+        --#{$prefix}img-max-height: 240px;
+        border-radius: var(--#{$prefix}card-border-radius)
+            var(--#{$prefix}card-border-radius) 0 0;
+        max-height: var(--#{$prefix}img-max-height);
+        height: var(--#{$prefix}img-max-height);
+        width: 100%;
+        object-fit: cover;
+    }
+}
+// End Blog Card
+
+// Utility Card
 .card-header {
     display: flex;
     align-items: center;
 
     .card-title {
         flex-grow: 1;
+
+        .card-title-content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
     }
 }
 
@@ -49,7 +94,6 @@
 
     .card-body-description {
         overflow: hidden;
-        font-weight: 400;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -58,16 +102,13 @@
     }
 }
 
-.card-archive-tick{
-    width: 24px;
-    height: 24px;
-    margin-left: auto;
+.card-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: start;
 }
-.card-icon img{
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-}
+
 .card-logo {
     width: 3rem;
     height: 3rem;
@@ -90,25 +131,3 @@
     width: 100%;
 }
 // End Utility Card
-h3{
-    margin: 0;
-}
-.card-job{
-    max-width: 315px;
-    --#{$prefix}card-padding-x: 1rem;
-    --#{$prefix}card-padding-y: 1rem;
-    padding: var(--#{$prefix}card-padding-y) var(--#{$prefix}card-padding-x);
-}
-
-.card-blog{
-    max-width: 100%;
-    .card-img-top {
-        --#{$prefix}img-max-height: 240px;
-        border-radius: var(--#{$prefix}card-border-radius)
-            var(--#{$prefix}card-border-radius) 0 0;
-        max-height: var(--#{$prefix}img-max-height);
-        height: var(--#{$prefix}img-max-height);
-        width: 100%;
-        object-fit: cover;
-    }
-}
